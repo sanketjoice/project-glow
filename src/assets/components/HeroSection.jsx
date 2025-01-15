@@ -3,7 +3,7 @@ import heroIMG from "./pgimg/Img-01.png";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row-reverse items-center p-8 md:p-16 bg-white">
+    <section className="flex flex-col md:flex-row-reverse items-center p-8 md:p-16 bg-white max-w-[1440px] m-auto">
 
       {/* Right Section: Text */}
       <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
