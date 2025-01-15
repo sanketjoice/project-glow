@@ -1,8 +1,8 @@
 import React from "react";
-import mainImage from "./Project Glow - Design Assets/Images/Img-02.png"; // Replace with your image path
-import iconOne from "./Project Glow - Design Assets/SVG Selected/happy.svg"; // Replace with your first icon path
-import iconTwo from "./Project Glow - Design Assets/SVG Selected/diagnostics.svg"; // Replace with your second icon path
-import iconThree from "./Project Glow - Design Assets/SVG Selected/Personalise.svg"; // Replace with your third icon path
+import mainImage from "./Project Glow - Design Assets/Images/Img-02.png"; 
+import iconOne from "./Project Glow - Design Assets/SVG Selected/happy.svg"; 
+import iconTwo from "./Project Glow - Design Assets/SVG Selected/diagnostics.svg"; 
+import iconThree from "./Project Glow - Design Assets/SVG Selected/Personalise.svg"; 
 
 function FeaturesSection() {
   const features = [
