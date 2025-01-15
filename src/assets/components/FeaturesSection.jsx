@@ -27,7 +27,7 @@ function FeaturesSection() {
   ];
 
   return (
-    <section className="bg-white px-6 py-12 md:px-16  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section className="bg-white px-6 py-12 md:px-16  grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[1440px] m-auto">
       {/* Left Section: Text and Features */}
       <div className="lg:ml-36">
         <h2 className="text-2xl md:text-4xl font-bold lg:w-[475px] mb-4">How It Works</h2>
