@@ -3,7 +3,7 @@ import logo from "../components/Project Glow - Design Assets/Project Glow Logo/P
 
 function Navbar() {
   return (
-    <nav className="flex justify-around items-center px-4 py-4 md:px-8 lg:px-16 bg-white shadow-md">
+    <nav className="flex justify-around items-center px-4 py-4 md:px-8 lg:px-16 bg-white shadow-md max-w-[1440px] m-auto">
       {/* Logo Section */}
       <div className="flex items-center">
         <img
