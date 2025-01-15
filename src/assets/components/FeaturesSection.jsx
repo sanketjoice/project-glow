@@ -1,101 +1,69 @@
 import React from "react";
-import mainIMG from "./pgimg/Img-02.png";
-import iconOne from "./Project Glow - Design Assets/Icons/analysing.png";
-import iconTwo from "./Project Glow - Design Assets/SVG Selected/face-recognition.svg";
-import iconThree from "./Project Glow - Design Assets/SVG Selected/personalise.svg";
-import iconFour from "./Project Glow - Design Assets/SVG Selected/dna.svg";
-import iconFive from "./Project Glow - Design Assets/SVG Selected/metrics.svg";
-import iconSix from "./Project Glow - Design Assets/SVG Selected/insurance.svg";
+import mainImage from "./Project Glow - Design Assets/Images/Img-02.png"; // Replace with your image path
+import iconOne from "./Project Glow - Design Assets/SVG Selected/happy.svg"; // Replace with your first icon path
+import iconTwo from "./Project Glow - Design Assets/SVG Selected/diagnostics.svg"; // Replace with your second icon path
+import iconThree from "./Project Glow - Design Assets/SVG Selected/Personalise.svg"; // Replace with your third icon path
 
 function FeaturesSection() {
-//  javascript object which helps component reusability
   const features = [
     {
-      title: "Extensively Trained",
+      title: "Upload Your Photos",
       description:
-        "Our technology has been trained on a diverse dataset of 100,000+ images to ensure high accuracy and reliability.",
+        "Use our advanced AI, trained on over 15,000 images, to analyze your skin with 100% accuracy for major concerns.",
       icon: iconOne,
     },
     {
-      title: "Image Recognition and Analysis",
+      title: "Get Science-Backed Results",
       description:
-        "Simply upload a selfie and our AI will instantly begin its detailed assessment, identifying and addressing key areas of concern with remarkable accuracy.",
+        "Discover insights powered by a database of over 10,000 research studies on skincare and dermatology.",
       icon: iconTwo,
     },
     {
-      title: "Personalised Recommendations",
+      title: "Personalized Solutions",
       description:
-        "Sophisticated algorithms deliver precise product suggestions tailored to your skin’s specific needs.",
+        "Receive customized skincare recommendations tailored to your unique skin type, sensitivity, and concerns.",
       icon: iconThree,
-    },
-    {
-      title: "Upload DNA Report",
-      description:
-        "Integrate genetic insights by uploading your DNA report, allowing us to refine your skincare recommendations based on your genetic predispositions.",
-      icon: iconFour,
-    },
-    {
-      title: "Medical Science Papers",
-      description:
-        "Grounded in the analysis of over 20,000 medical science papers, our technology is built on a solid foundation of cutting-edge medical knowledge.",
-      icon: iconFive,
-    },
-    {
-      title: "Upload Health Reports and Blood Work",
-      description:
-        "Further personalize your skincare by providing health reports and blood work, enabling our AI to consider your overall health in its analysis.",
-      icon: iconSix,
     },
   ];
 
   return (
-    <section className="bg-white p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-      {/* Left Section: Text */}
-      <div>
-        <h2 className="text-2xl md:text-4xl font-bold mb-6">
-          Do You Really Know What Your Skin Needs?
-        </h2>
-        <p className="text-gray-600 mb-8 text-xl">
+    <section className="bg-white px-6 py-12 md:px-16  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      {/* Left Section: Text and Features */}
+      <div className="lg:ml-36">
+        <h2 className="text-2xl md:text-4xl font-bold lg:w-[475px] mb-4">How It Works</h2>
+        <p className="text-gray-600 mb-8 text-lg md:text-xl ">
           Dive into a tailored and holistic approach that decodes your skin’s
           unique needs, ensuring you provide it with exactly what it requires
           for optimal health and radiance.
         </p>
-        <h3 className="text-xl font-bold mb-4">
-          The Most Comprehensive Skin Health Analysis
-        </h3>
         <div className="space-y-6">
-          {features.slice(0, 4).map((feature, index) => (
+          {features.map((feature, index) => (
             <div key={index} className="flex space-x-4">
-              <img src={feature.icon} alt={feature.title} className="w-8 h-8" />
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                className="w-10 h-10"
+              />
               <div>
                 <h4 className="text-lg font-semibold">{feature.title}</h4>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-600 lg:w-[400px] lg:h-[]">{feature.description}</p>
               </div>
             </div>
           ))}
         </div>
+        <button className="mt-8 px-[28px] py-3 bg-purple-600 text-white rounded-full text-md hover:bg-purple-700">
+          Start My Skin Analysis
+        </button>
       </div>
-  
-      {/* Right Section: Image and Extra Features */}
+
+      {/* Right Section: Image */}
       <div className="relative">
         <img
-          src={mainIMG} // Replace with the image of the woman's face
+          src={mainImage} 
           alt="Face Analysis"
-          className="rounded-lg"
+          className="rounded-lg w-[390px] lg:h-[729px] lg:w-[652px]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
-        {/* Additional Features Below Image */}
-        <div className=" grid gap-6">
-          {features.slice(4).map((feature, index) => (
-            <div key={index} className="flex space-x-4 items-start">
-              <img src={feature.icon} alt={feature.title} className="w-8 h-8" />
-              <div>
-                <h4 className="text-lg font-semibold">{feature.title}</h4>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
