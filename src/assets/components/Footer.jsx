@@ -5,29 +5,52 @@ import instaLogo from "./Project Glow - Design Assets/Icons/icons8-instagram-log
 import xLogo from "./Project Glow - Design Assets/Icons/icons8-x-logo-50.png";
 import tiktokLogo from "./Project Glow - Design Assets/Icons/icons8-tiktok-50.png";
 
-export default function Footer(){
-    return(
-        <>
-        <div className="container max-w-[1440px] max-h-[170px] mb-10">
-                <div className="flex justify-between">
-                    <img src={logo} alt="logo" className="w-[200px] ml-40 h-[50px]" />
-                    <li className="flex gap-4">
-                        <ul className="text-[14px]">Project Glow Skin for Business </ul>
-                        <ul className="text-[14px]">Affiliates</ul>
-                        <ul className="text-[14px]">Terms & Policies</ul>
-                        <ul className="text-[14px]">Contact Us</ul>
-                    </li>
-                </div>
-                <div className="pt-10 flex justify-between">
-                    <p className="text-[12px] text-[#9E9E9E] ml-40">©2024 Project Glow Skin Co. All Rights Reserved. </p>
-                    <div className="flex gap-2">
-                        <img src={facebookLogo} alt="fblogo" className="w-[36px]" />
-                        <img src={instaLogo} alt="instalogo" className="w-[32px] h-[32px] rounded-full" />
-                        <img src={xLogo} alt="xlogo" className="w-[32px] h-[32px] rounded-full"/>
-                        <img src={tiktokLogo} alt="tiktoklogo" className="w-[32px] h-[32px] rounded-full"/>
-                    </div>
-                </div>
+export default function Footer() {
+  return (
+    <footer className="bg-white py-6">
+      <div className="container mx-auto max-w-[1440px] px-6 md:px-10 lg:px-20">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <img src={logo} alt="logo" className="w-40 md:w-52 mb-4 md:mb-0" />
+          <ul className="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-600">
+            <li className="hover:text-gray-800 cursor-pointer">
+              Project Glow Skin for Business
+            </li>
+            <li className="hover:text-gray-800 cursor-pointer">Affiliates</li>
+            <li className="hover:text-gray-800 cursor-pointer">Terms & Policies</li>
+            <li className="hover:text-gray-800 cursor-pointer">Contact Us</li>
+          </ul>
         </div>
-        </>
-    )
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center mt-6">
+          <p className="text-xs text-gray-500 text-center md:text-left">
+            ©2024 Project Glow Skin Co. All Rights Reserved.
+          </p>
+          <div className="flex justify-center gap-3 mt-4 md:mt-0">
+            <img
+              src={facebookLogo}
+              alt="Facebook"
+              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+            />
+            <img
+              src={instaLogo}
+              alt="Instagram"
+              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+            />
+            <img
+              src={xLogo}
+              alt="Twitter"
+              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+            />
+            <img
+              src={tiktokLogo}
+              alt="TikTok"
+              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
