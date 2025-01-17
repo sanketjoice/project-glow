@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import heroIMG from "./pgimg/Img-01.png";
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleStartAnalysis = () => {
+    navigate("/project-glow/skin-analysis");
+  };
+
   return (
     <section className="flex flex-col md:flex-row-reverse items-center p-8 md:p-16 bg-white max-w-[1440px] m-auto">
-
       {/* Right Section: Text */}
       <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
         <h1 className="text-2xl md:text-4xl font-bold leading-snug">
@@ -15,7 +21,10 @@ function HeroSection() {
           skin's needs. Get science-backed recommendations for healthier,
           radiant skin.
         </p>
-        <button className="bg-[#303030] text-white px-8 py-3 rounded-full text-lg transition-all">
+        <button
+          onClick={handleStartAnalysis}
+          className="bg-[#303030] text-white px-8 py-3 rounded-full text-lg transition-all"
+        >
           Start My Skin Analysis
         </button>
         <p className="text-gray-600 text-sm md:text-base">
