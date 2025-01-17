@@ -15,7 +15,7 @@ function HeroSection() {
           skin's needs. Get science-backed recommendations for healthier,
           radiant skin.
         </p>
-        <button className="bg-purple-600 text-white px-8 py-3 rounded-full text-lg hover:bg-purple-700 transition-all">
+        <button className="bg-[#303030] text-white px-8 py-3 rounded-full text-lg transition-all">
           Start My Skin Analysis
         </button>
         <p className="text-gray-600 text-sm md:text-base">

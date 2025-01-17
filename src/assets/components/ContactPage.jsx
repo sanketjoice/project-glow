@@ -4,7 +4,7 @@ import mainImg from "./pgimg/image55.png";
 const ContactPage = () => {
   return (
     <>
-      <div className="max-w-[1439px] mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-0 pb-8">
         {/* Image Section */}
         <div className="relative">
           {/* For small screens, crop the image */}

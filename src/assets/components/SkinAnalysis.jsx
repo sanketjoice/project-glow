@@ -84,12 +84,6 @@ export default function SkinAnalysis() {
           </div>
         </div>
 
-        {/* Button Section */}
-        <div className="flex justify-center pt-10">
-          <button className="rounded-full bg-[#6D28D9] text-white py-3 px-6 sm:py-4 sm:px-10 lg:ml-[450px]">
-            Start My Skin Analysis
-          </button>
-        </div>
       </div>
     </>
   );

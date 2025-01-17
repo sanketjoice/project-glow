@@ -1,21 +1,18 @@
 import React from "react";
-import Navbar from "../src/assets/components/Navbar";
-import HeroSection from "../src/assets/components/HeroSection";
-import FeaturesSection from "../src/assets/components/FeaturesSection";
-import SkinAnalysis from "./assets/components/skinAnalysis";
-import ContactPage from "./assets/components/ContactPage";
-import Footer from "./assets/components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./LandingPage";
+import BusinessPage from "./BusinessPage";
 
 function App() {
   return (
-    <div className="bg-white">
-      <Navbar />
-      <HeroSection />
-      <FeaturesSection />
-      <SkinAnalysis />
-      <ContactPage />
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-white">
+        <Routes>
+          <Route path="/project-glow" element={<LandingPage />} />
+          <Route path="/project-glow/business" element={<BusinessPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -51,9 +51,6 @@ function FeaturesSection() {
             </div>
           ))}
         </div>
-        <button className="mt-8 px-[28px] py-3 bg-purple-600 text-white rounded-full text-md hover:bg-purple-700">
-          Start My Skin Analysis
-        </button>
       </div>
 
       {/* Right Section: Image */}
