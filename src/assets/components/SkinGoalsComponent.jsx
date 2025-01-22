@@ -142,7 +142,9 @@ export default function SkinGoalsComponent() {
         </div>
 
         <div className="mt-[100px] mb-6 flex justify-between h-[98px] w-[390px] py-[20px] px-[30px]">
-          <button className="text-[16px] text-gray-500 underline">Skip</button>
+          <button className="text-[16px] text-gray-500 underline" 
+          onClick={handleNextClick}>
+          Skip</button>
           <button
             className={`w-[188px] py-[12px] px-[50px] h-[48px] rounded-[6px] shadow-lg flex items-center justify-center gap-1 text-[16px] ${
               selectedGoals.length > 0

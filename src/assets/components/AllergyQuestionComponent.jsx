@@ -4,13 +4,18 @@ import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import gem from "./Project Glow - Design Assets/SVG Selected/gem-green.svg";
 import allergyIcon from "./Project Glow - Design Assets/Icons/SVG/skin-prick-test.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function AllergyQuestionComponent() {
   const [selectedAnswer, setSelectedAnswer] = useState("");
+  const navigate = useNavigate();
 
   const handleNextClick = () => {
-    console.log("Selected Answer:", selectedAnswer);
-
+    if (selectedAnswer === "No") {
+      navigate("/project-glow/skinconditions");
+    } else {
+      navigate("/project-glow/allergies");
+    }
   };
 
   return (
@@ -34,17 +39,16 @@ export default function AllergyQuestionComponent() {
         {/* Step Indicator */}
         <div className="flex justify-center items-center mt-4 space-x-2">
           {[1, 2, 3].map((step, index) => (
-  <div
-    key={index}
-    className={`w-[24px] h-[24px] text-white rounded-full py-[2px] 
-      px-[7px] text-[14px] leading-[22px] justify-center text-center border ${
-        step <= 2 ? "bg-black" : "bg-gray-300"
-      }`}
-  >
-    {step}
-  </div>
-))}
-          
+            <div
+              key={index}
+              className={`w-[24px] h-[24px] text-white rounded-full py-[2px] 
+                px-[7px] text-[14px] leading-[22px] justify-center text-center border ${
+                  step <= 2 ? "bg-black" : "bg-gray-300"
+                }`}
+            >
+              {step}
+            </div>
+          ))}
         </div>
 
         {/* Question Section */}
@@ -82,7 +86,9 @@ export default function AllergyQuestionComponent() {
 
         {/* Footer Buttons */}
         <div className="mt-[200px] mb-6 flex justify-between h-[98px] w-[390px] py-[20px] px-[30px]">
-          <button className="text-[16px] text-gray-500 underline">Skip</button>
+          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+            Skip
+          </button>
           <button
             className={`w-[188px] py-[12px] px-[50px] h-[48px] rounded-[6px] shadow-lg flex items-center justify-center gap-1 text-[16px] ${
               selectedAnswer
@@ -92,7 +98,8 @@ export default function AllergyQuestionComponent() {
             onClick={handleNextClick}
             disabled={!selectedAnswer}
           >
-            Earn 1 x <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px]" />
+            Earn 1 x{" "}
+            <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px]" />
           </button>
         </div>
       </div>

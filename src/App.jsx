@@ -7,6 +7,10 @@ import QuestionnaireComponent from "./assets/components/QuestionnaireComponent";
 import SkinTypeComponent from "./assets/components/SkinTypeComponent";
 import SkinGoalsComponent from "./assets/components/SkinGoalsComponent";
 import AllergyQuestionComponent from "./assets/components/AllergyQuestionComponent";
+import AllergiesComponent from "./assets/components/AllergiesComponent";
+import SkinConditionsComponent from "./assets/components/SkinConditionsComponent";
+import IngredientPreferences from "./assets/components/IngredientPreferences";
+import MedQuestions from "./assets/components/MedQuestions";
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
           <Route path="/project-glow/skin-type" element={<SkinTypeComponent />} />
           <Route path="/project-glow/skin-goals" element={<SkinGoalsComponent />} />
           <Route path="/project-glow/allergyqs" element={<AllergyQuestionComponent />} />
+          <Route path="/project-glow/allergies" element={<AllergiesComponent />} />
+          <Route path="/project-glow/skinconditions" element={<SkinConditionsComponent />} />
+          <Route path="/project-glow/ingredients" element={<IngredientPreferences />} />
+          <Route path="/project-glow/medqs" element={<MedQuestions />} />
         </Routes>
       </div>
     </Router>
