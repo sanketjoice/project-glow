@@ -5,11 +5,15 @@ import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import profileIcon from "./Project Glow - Design Assets/Icons/SVG/info.svg";
 import gem from "./Project Glow - Design Assets/SVG Selected/gem-green.svg";
+import { GenderContext } from "./GenderContext";
+import { useContext } from "react";
 
 export default function QuestionnaireComponent() {
+  
+  const { gender, setGender } = useContext(GenderContext);
+
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
-  const [gender, setGender] = useState("");
   const [location, setLocation] = useState("");
   const [showGender, setShowGender] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
@@ -29,10 +33,12 @@ export default function QuestionnaireComponent() {
   };
 
   const handleGenderChange = (e) => {
-    const value = e.target.value;
-    setGender(value);
-    checkShowLocation(month, year, value);
+    const value = e.target.value; // Get the selected value
+    setGender(value); // Update the GenderContext value 
+    
+    checkShowLocation(month, year, value); 
   };
+  
 
   const checkShowGender = (monthValue, yearValue) => {
     if (monthValue && yearValue && yearValue.length === 4) {
@@ -146,8 +152,8 @@ export default function QuestionnaireComponent() {
                   value={gender}
                   onChange={handleGenderChange}
                   className="w-[330px] h-[48px] border border-gray-300 rounded-[6px] 
-                  px-[16px] py-[12px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-black
-                   bg-white"
+                    px-[16px] py-[12px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-black
+                    bg-white"
                 >
                   <option value="">Please select</option>
                   <option value="male">Male</option>

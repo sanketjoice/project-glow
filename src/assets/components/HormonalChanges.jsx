@@ -3,23 +3,17 @@ import logo from "../components/Project Glow - Design Assets/Project Glow Logo/P
 import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import gem from "./Project Glow - Design Assets/SVG Selected/gem-green.svg";
-import medicatedIcon from "./Project Glow - Design Assets/Icons/SVG/tonic.svg";
+import hormonalIcon from "./Project Glow - Design Assets/Icons/SVG/menstrual-cycle.svg"; 
+import logoOne from "./Project Glow - Design Assets/Icons/SVG/love (1).svg";
+import logoTwo from "./Project Glow - Design Assets/Icons/SVG/account.svg";
 import { useNavigate } from "react-router-dom";
-import { GenderContext } from "./GenderContext";
-import { useContext } from "react";
 
-export default function MedQuestions() {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [optionalInput, setOptionalInput] = useState("");
-  const { gender } = useContext(GenderContext);
+export default function HormonalQuestion() {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const navigate = useNavigate();
-
   const handleNextClick = () => {
-    if (gender === "female") {
-      navigate("/project-glow/pregnancy-question");
-    } else {
-      navigate("/project-glow/allset"); 
-    }
+    navigate("/project-glow/estimation");
   };
 
   return (
@@ -56,28 +50,27 @@ export default function MedQuestions() {
         </div>
 
         {/* Question Section */}
-        <div className="flex flex-col items-center px-6 text-center">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center px-6 text-center ">
+          <div className="flex items-center gap-2"> 
             <div className="bg-[#F0F7EF] rounded-full p-4">
               <img
-                src={medicatedIcon}
-                alt="Medicated Icon"
+                src={hormonalIcon}
+                alt="Hormonal Icon"
                 className="w-[70px] h-[70px]"
               />
             </div>
-            <h1 className="mt-4 w-[240px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
-              Are you currently using any prescribed or medicated skincare
-              products?
+            <h1 className="mt-4 w-[240px] h-[120px] text-[24px] mb-1 leading-[30px] text-start font-semibold text-[#303030]">
+            Do you experience hormonal changes that affect your skin during your cycle?
             </h1>
           </div>
 
           {/* Answer Options */}
           <div className="flex flex-col gap-[12px] mt-8 w-[330px]">
-            {["Yes", "No"].map((option) => (
+            {["Yes", "No", "Not sure"].map((option) => (
               <button
                 key={option}
                 onClick={() => setSelectedOption(option)}
-                className={`py-[10px] px-[24px] w-[330px] h-[42px] border rounded-full text-[16px] font-medium ${
+                className={`py-[10px] px-[24px] h-[42px] border rounded-full text-[16px] font-medium ${
                   selectedOption === option
                     ? "border-black bg-gray-200"
                     : "border-[#303030] bg-transparent"
@@ -87,27 +80,49 @@ export default function MedQuestions() {
               </button>
             ))}
           </div>
-
-          {/* Optional Input Field */}
-          {selectedOption === "Yes" && (
-            <div className="mt-9 items-start justify-start w-[330px] h-[80]">
-              <p className="text-[14px] text-[#303030] ml-[-80px] mb-2">
-                Please specify if comfortable (Optional)
-              </p>
-              <input
-                type="text"
-                placeholder="Specify here"
-                className="w-[330px] h-[48px] py-[12px] px-[16px] border border-[#DFE4EA] rounded-[6px] text-sm"
-                value={optionalInput}
-                onChange={(e) => setOptionalInput(e.target.value)}
-              />
+        </div>
+    
+        {/* Why We Ask Section */}
+        <div className="mt-12 p-[16px] mx-6 mb-20 h-[252px] w-[330px]">
+        <div className="bg-[#F0F7EF] border border-[#9CA3AF] rounded-[10px] p-4">
+            {/* Header */}
+            <div className="flex items-center gap-2">
+            
+            
+            <p className="text-[14px] leading-[22px] pb-2 font-semibold text-[#303030]">
+                Why we ask
+            </p>
             </div>
-          )}
+
+            {/* Main Text */}
+            <div className="flex gap-[12px] mb-4 items-start">
+            <img
+                src={logoOne} 
+                alt="Logo 2"
+                className="w-[36px] h-[36px]"
+            />
+            <p className="mt-2 text-[14px] leading-[20px] text-[#111928]">
+            Hormonal changes during your cycle can affect your skin’s oil
+            production, sensitivity, and hydration levels. Sharing this helps us tailor insights to your skin’s unique needs.
+            </p>
+            </div>
+
+            {/* Optional Note */}
+            <div className="flex gap-[12px] items-start">
+            <img
+                src={logoTwo} 
+                alt="Logo 1"
+                className="w-[36px] h-[36px]"/>
+            <p className="mt-2 text-[14px] leading-[20px] text-[#111928]">
+            This information is optional, kept private, and used only to improve your skin analysis.
+            </p>
+            </div>
+        </div>
         </div>
 
         {/* Footer Buttons */}
         <div className="mt-auto mb-6 flex justify-between px-6">
-          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+          <button className="text-[16px] text-gray-500 underline">
             Skip
           </button>
           <button

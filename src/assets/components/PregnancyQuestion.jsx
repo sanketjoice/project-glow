@@ -1,25 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../components/Project Glow - Design Assets/Project Glow Logo/PG-Skin logo-dark.svg";
 import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import gem from "./Project Glow - Design Assets/SVG Selected/gem-green.svg";
-import medicatedIcon from "./Project Glow - Design Assets/Icons/SVG/tonic.svg";
+import pregnancyIcon from "./Project Glow - Design Assets/Icons/SVG/mother.svg";
 import { useNavigate } from "react-router-dom";
 import { GenderContext } from "./GenderContext";
-import { useContext } from "react";
 
-export default function MedQuestions() {
+export default function PregnancyQuestion() {
   const [selectedOption, setSelectedOption] = useState("");
-  const [optionalInput, setOptionalInput] = useState("");
-  const { gender } = useContext(GenderContext);
   const navigate = useNavigate();
+  const { gender } = useContext(GenderContext);
+
+  if (gender !== "female") {
+    return <Navigate to="" replace />; // Redirect if not female
+  }
+// Redirect or skip this question if gender is not "female"
+if (gender !== "female") {
+    navigate(""); // Redirect to the next component
+    return null;
+  }
 
   const handleNextClick = () => {
-    if (gender === "female") {
-      navigate("/project-glow/pregnancy-question");
-    } else {
-      navigate("/project-glow/allset"); 
-    }
+    navigate("/project-glow/hormonal"); // Replace with the actual route for the next page
   };
 
   return (
@@ -60,14 +63,13 @@ export default function MedQuestions() {
           <div className="flex items-center gap-4">
             <div className="bg-[#F0F7EF] rounded-full p-4">
               <img
-                src={medicatedIcon}
-                alt="Medicated Icon"
+                src={pregnancyIcon}
+                alt="Pregnancy Icon"
                 className="w-[70px] h-[70px]"
               />
             </div>
             <h1 className="mt-4 w-[240px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
-              Are you currently using any prescribed or medicated skincare
-              products?
+              Are you pregnant or breastfeeding?
             </h1>
           </div>
 
@@ -77,7 +79,7 @@ export default function MedQuestions() {
               <button
                 key={option}
                 onClick={() => setSelectedOption(option)}
-                className={`py-[10px] px-[24px] w-[330px] h-[42px] border rounded-full text-[16px] font-medium ${
+                className={`py-[10px] px-[24px] h-[42px] border rounded-full text-[16px] font-medium ${
                   selectedOption === option
                     ? "border-black bg-gray-200"
                     : "border-[#303030] bg-transparent"
@@ -87,22 +89,6 @@ export default function MedQuestions() {
               </button>
             ))}
           </div>
-
-          {/* Optional Input Field */}
-          {selectedOption === "Yes" && (
-            <div className="mt-9 items-start justify-start w-[330px] h-[80]">
-              <p className="text-[14px] text-[#303030] ml-[-80px] mb-2">
-                Please specify if comfortable (Optional)
-              </p>
-              <input
-                type="text"
-                placeholder="Specify here"
-                className="w-[330px] h-[48px] py-[12px] px-[16px] border border-[#DFE4EA] rounded-[6px] text-sm"
-                value={optionalInput}
-                onChange={(e) => setOptionalInput(e.target.value)}
-              />
-            </div>
-          )}
         </div>
 
         {/* Footer Buttons */}

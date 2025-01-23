@@ -11,9 +11,16 @@ import AllergiesComponent from "./assets/components/AllergiesComponent";
 import SkinConditionsComponent from "./assets/components/SkinConditionsComponent";
 import IngredientPreferences from "./assets/components/IngredientPreferences";
 import MedQuestions from "./assets/components/MedQuestions";
+import { GenderProvider } from "./assets/components/GenderContext";
+import PregnancyQuestion from "./assets/components/PregnancyQuestion";
+import HormonalChanges from "./assets/components/HormonalChanges";
+import AllSet from "./assets/components/AllSet";
+import DateEstimation from "./assets/components/DateEstimation";
+
 
 function App() {
   return (
+      <GenderProvider>  
     <Router>
       <div className="bg-white">
         <Routes>
@@ -28,9 +35,14 @@ function App() {
           <Route path="/project-glow/skinconditions" element={<SkinConditionsComponent />} />
           <Route path="/project-glow/ingredients" element={<IngredientPreferences />} />
           <Route path="/project-glow/medqs" element={<MedQuestions />} />
+          <Route path="/project-glow/pregnancy-question" element={<PregnancyQuestion />} />
+          <Route path="/project-glow/hormonal" element={<HormonalChanges />}/>
+          <Route path="/project-glow/allset" element={<AllSet />}/>
+          <Route path="/project-glow/estimation" element={<DateEstimation />}/>
         </Routes>
       </div>
     </Router>
+        </GenderProvider>
   );
 }
 
