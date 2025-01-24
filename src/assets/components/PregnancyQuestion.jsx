@@ -22,7 +22,7 @@ if (gender !== "female") {
   }
 
   const handleNextClick = () => {
-    navigate("/project-glow/hormonal"); // Replace with the actual route for the next page
+    navigate("/project-glow/hormonal"); 
   };
 
   return (

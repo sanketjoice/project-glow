@@ -122,7 +122,7 @@ export default function HormonalQuestion() {
 
         {/* Footer Buttons */}
         <div className="mt-auto mb-6 flex justify-between px-6">
-          <button className="text-[16px] text-gray-500 underline">
+          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
             Skip
           </button>
           <button
