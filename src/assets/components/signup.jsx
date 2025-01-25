@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import logo from "../components/Project Glow - Design Assets/Project Glow Logo/PG-Skin logo-dark.svg";
 import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
-import rocketIcon from "./Project Glow - Design Assets/SVG Selected/rocket 1.png";
 import { useNavigate } from "react-router-dom";
 
 
-export default function PregnancyQuestion() {
+export default function Signup() {
   const navigate = useNavigate();
+  const [selectedOption, setSelectedOption] = useState(null);
   
   const handleNextClick = () => {
-    navigate("/project-glow/login"); 
+    navigate(""); 
   };
 
   return (
@@ -30,23 +30,21 @@ export default function PregnancyQuestion() {
             alt="Close Icon"
           />
         </div>
-         <div className="flex gap-3 flex-col justify-center items-center">   
-        <img src={rocketIcon} alt="rocketIcon" className="w-[100px] h-[100px] mt-16" />
-        <h6 className="text-[24px] leading-[30px] w-[320px] h-[120px] text-center ">All set! Create an account to save your
-        profile and access personalized skincare insights anytime.</h6>
-
+         
         {/* Footer Buttons */}
         <div className="mt-auto mb-6 flex justify-between px-6">
-          <button
-            className="bg-black text-white w-[273px] h-[50px] py-[13px] px-[77px] mt-[275px] rounded-[6px]
-            shadow-lg flex items-center justify-center gap-1 text-[16px]"
-            onClick={handleNextClick}>
-            Save My Profile
+        <button
+            className={`w-[188px] py-[12px] h-[48px] rounded-[6px] shadow-lg flex items-center justify-center gap-1 text-[16px] ${
+              selectedOption
+                ? "bg-black text-white"
+                : "bg-gray-300 text-gray-500 cursor-not-allowed"
+            }`} onClick={handleNextClick}>
+            Sign Up
           </button>
           </div>
         </div>
       </div> 
-    </div>
+   
       );
     } 
      

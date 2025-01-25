@@ -16,6 +16,8 @@ import PregnancyQuestion from "./assets/components/PregnancyQuestion";
 import HormonalChanges from "./assets/components/HormonalChanges";
 import AllSet from "./assets/components/AllSet";
 import DateEstimation from "./assets/components/DateEstimation";
+import Login from "./assets/components/Login";
+import Signup from "./assets/components/signup";
 
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
           <Route path="/project-glow/hormonal" element={<HormonalChanges />}/>
           <Route path="/project-glow/allset" element={<AllSet />}/>
           <Route path="/project-glow/estimation" element={<DateEstimation />}/>
+          <Route path="/project-glow/login" element={<Login />}/>
+          <Route path="/project-glow/signup" element={<Signup />}/>
         </Routes>
       </div>
     </Router>
