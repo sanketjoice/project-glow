@@ -68,7 +68,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-[390px] h-[680px] overflow-auto rounded-xl shadow-lg flex flex-col bg-[#F4F7F2]">
+      <div className="w-[390px] h-[680px] overflow-auto rounded-xl shadow-lg flex flex-col bg-white">
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-4">
         </div>
@@ -114,8 +114,8 @@ const Login = () => {
       </div>
       <button
         onClick={handleNextClick}
-        className="flex h-[48px] text-center w-[330px] items-center 
-        gap-2  px-[24px] py-[12px] bg-gray-200 text-black rounded-[6px] mb-3">
+        className="flex h-[48px] text-center w-[256px] items-center 
+        gap-2  px-[24px] py-[12px] bg-black text-white rounded-[6px] mb-3">
         <FaEnvelope />
         Continue with Email
       </button>
