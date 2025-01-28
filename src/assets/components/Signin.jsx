@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../components/Project Glow - Design Assets/Project Glow Logo/PG-Skin logo-dark.svg";
 import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
-import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import { useNavigate } from "react-router-dom";
 
 
@@ -56,4 +55,4 @@ export default function Signin() {
       </div> 
    
       );
-    } 
+    }

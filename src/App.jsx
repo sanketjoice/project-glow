@@ -19,6 +19,7 @@ import DateEstimation from "./assets/components/DateEstimation";
 import Login from "./assets/components/Login";
 import Signup from "./assets/components/signup";
 import Signin from "./assets/components/Signin";
+import Congratulations from "./assets/components/Congratulations";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/project-glow/login" element={<Login />}/>
           <Route path="/project-glow/signup" element={<Signup />}/>
           <Route path="/project-glow/signin" element={<Signin />}/>
+          <Route path="/project-glow/congo" element={<Congratulations />}/>
         </Routes>
       </div>
     </Router>
