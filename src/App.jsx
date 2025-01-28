@@ -20,6 +20,8 @@ import Login from "./assets/components/Login";
 import Signup from "./assets/components/signup";
 import Signin from "./assets/components/Signin";
 import Congratulations from "./assets/components/Congratulations";
+import AIAnalysis from "./assets/components/AIAnalysis";
+import FirstBadge from "./assets/components/FirstBadge";
 
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
           <Route path="/project-glow/signup" element={<Signup />}/>
           <Route path="/project-glow/signin" element={<Signin />}/>
           <Route path="/project-glow/congo" element={<Congratulations />}/>
+          <Route path="/project-glow/aianalysis" element={<AIAnalysis />}/>
+          <Route path="/project-glow/badge" element={<FirstBadge />}/>
         </Routes>
       </div>
     </Router>

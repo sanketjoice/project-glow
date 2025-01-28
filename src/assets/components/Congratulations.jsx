@@ -1,7 +1,13 @@
 import React from "react";
 import gem from "./Project Glow - Design Assets/Icons/jade.png";
+import { useNavigate } from "react-router-dom";
 
 const Congratulations = () => {
+  const navigate = useNavigate();
+  const handleNextClick = () => {
+    navigate("/project-glow/aianalysis"); 
+  };
+
   return (
     <div className="flex flex-col items-center  justify-center  bg-gray-100 p-4">
       <div className="bg-white rounded-2xl shadow-lg p-6 max-w-[390px] h-[713px] text-center  self-center">
@@ -20,13 +26,14 @@ const Congratulations = () => {
         </p>
         <button
           className="mt-[170px] bg-black text-white text-sm w-[126px] h-[50px] py-[13px] px-[28px] font-medium rounded-[6px]"
+          onClick={handleNextClick}
         >
           Continue
         </button>
       </div>
     </div>
   );
-};
+}; 
 
 export default Congratulations;
  

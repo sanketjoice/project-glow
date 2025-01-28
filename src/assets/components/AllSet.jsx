@@ -6,7 +6,7 @@ import rocketIcon from "./Project Glow - Design Assets/SVG Selected/rocket 1.png
 import { useNavigate } from "react-router-dom";
 
 
-export default function PregnancyQuestion() {
+export default function AllSet() {
   const navigate = useNavigate();
   
   const handleNextClick = () => {
