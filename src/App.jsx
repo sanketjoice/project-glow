@@ -22,6 +22,9 @@ import Signin from "./assets/components/Signin";
 import Congratulations from "./assets/components/Congratulations";
 import AIAnalysis from "./assets/components/AIAnalysis";
 import FirstBadge from "./assets/components/FirstBadge";
+import OverallScore from "./assets/components/OverallScore";
+import PerceivedSkinAge from "./assets/components/PercievedSkinAge";
+import FacialSkinAnalysisResult from "./assets/components/FacialSkinAnalysisResult";
 
 
 function App() {
@@ -51,6 +54,9 @@ function App() {
           <Route path="/project-glow/congo" element={<Congratulations />}/>
           <Route path="/project-glow/aianalysis" element={<AIAnalysis />}/>
           <Route path="/project-glow/badge" element={<FirstBadge />}/>
+          <Route path="/project-glow/overall" element ={<OverallScore />}/>
+          <Route path="/project-glow/confetti" element={<PerceivedSkinAge />}/>
+          <Route path="/project-glow/analysisresult" element={<FacialSkinAnalysisResult />}/>
         </Routes>
       </div>
     </Router>

@@ -8,7 +8,7 @@ export default function FirstBadge() {
   const navigate = useNavigate();
   
   const handleNextClick = () => {
-    navigate(""); 
+    navigate("/project-glow/overall"); 
   };
 
   return (
