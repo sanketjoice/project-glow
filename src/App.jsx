@@ -25,6 +25,8 @@ import FirstBadge from "./assets/components/FirstBadge";
 import OverallScore from "./assets/components/OverallScore";
 import PerceivedSkinAge from "./assets/components/PercievedSkinAge";
 import FacialSkinAnalysisResult from "./assets/components/FacialSkinAnalysisResult";
+import AnalysisInfo from "./assets/components/AnalysisInfo";
+import WrinklesSection from "./assets/components/WrinklesSection";
 
 
 function App() {
@@ -57,6 +59,8 @@ function App() {
           <Route path="/project-glow/overall" element ={<OverallScore />}/>
           <Route path="/project-glow/confetti" element={<PerceivedSkinAge />}/>
           <Route path="/project-glow/analysisresult" element={<FacialSkinAnalysisResult />}/>
+          <Route path="/project-glow/info" element={<AnalysisInfo />}/>
+          <Route path="/project-glow/wrinkles" element={<WrinklesSection />}/>
         </Routes>
       </div>
     </Router>

@@ -4,8 +4,28 @@ import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/SVG Selected/share.png";
 import info from "./Project Glow - Design Assets/SVG Selected/Info circle.png";
 import darkSpots from "./Project Glow - Design Assets/SVG Selected/Group 212.png";
+import wrinkles from "./Project Glow - Design Assets/SVG Selected/skin-texture.svg";
+import wrinkless from "./Project Glow - Design Assets/Icons/SVG/Group.png";
+import firmness from "./Project Glow - Design Assets/SVG Selected/skin-firmness.svg";
+import redness from "./Project Glow - Design Assets/SVG Selected/Group 204.png";
+import hydration from "./Project Glow - Design Assets/SVG Selected/skin-hydration.svg";
+import pore from "./Project Glow - Design Assets/SVG Selected/skin-pore.svg";
+import uv from "./Project Glow - Design Assets/SVG Selected/skin-UV.png";
+import darkcircles from "./Project Glow - Design Assets/SVG Selected/skin-dark circles.png";
+import acne from "./Project Glow - Design Assets/SVG Selected/facial.svg";
+import chevron from "./Project Glow - Design Assets/Icons/chevron-left.png";
+import gem from "./Project Glow - Design Assets/Icons/jade.png";
+import request from "./Project Glow - Design Assets/SVG Selected/request.svg";
+
+
 export default function FacialSkinAnalysisResult() {
-  const navigate = useNavigate();
+  const navigate = useNavigate("/project-glow/info");
+  const handleInfoClick = () => {
+    navigate("/project-glow/info");
+  };
+  const handleWrinkleIcon = () => {
+    navigate("/project-glow/wrinkles");
+  };
 
   const formatDate = (date) => {
     const months = [
@@ -191,8 +211,8 @@ export default function FacialSkinAnalysisResult() {
           </div>
         </div>
 
-        <div className="mt-6">
-          <p className="text-[#303030] text-sm text-center underline">How do we analyze your skin?</p>
+        <div className="mt-6" onClick={handleInfoClick}>
+          <p className="text-[#303030] text-sm text-center hover:cursor-pointer underline">How do we analyze your skin?</p>
         </div>
         <div className="border border-[#9E9E9E] w-[350px] mt-8 h-0"></div>
         <div className="w-[350px] h-[156px] mt-4">
@@ -215,69 +235,59 @@ export default function FacialSkinAnalysisResult() {
             <div className="bg-[#F56060] h-[8px] w-[20px] rounded-[10px]"></div>
             <p className="text-[12px] text-[#303030]">Severe issue, needs immediate care</p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {/* Issue 1 */}
-            <div className="flex items-center">
-              <div className="relative w-16 h-16">
-                <svg width="64" height="64">
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="28"
-                    stroke="#E5E5E5"
-                    strokeWidth="8"
-                    fill="none"
-                  />
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="28"
-                    stroke="#22AD5C"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeDasharray="176"
-                    strokeDashoffset="35"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center text-sm font-bold">
-                  <span></span>
-                </div>
-              </div>
-              <p className="ml-4 text-[#303030]">Wrinkles</p>
-            </div>
-            {/* Issue 2 */}
-            <div className="flex items-center">
-              <div className="relative w-[104px] h-[104px]">
-                <svg width="64" height="64">
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="28"
-                    stroke="#E5E5E5"
-                    strokeWidth="8"
-                    fill="none"
-                  />
-                  <circle
-                    cx="32"
-                    cy="32"
-                    r="28"
-                    stroke="#22AD5C"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeDasharray="176"
-                    strokeDashoffset="70"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center text-sm font-bold">
-                  <span><img src={darkSpots} alt="" className="w-[47px] h-[40px]" /></span>
-                </div>
-              </div>
-              <p className="ml-4 text-[#303030]">Dark Spots</p>
-            </div>
-            {/* Add more issues as needed */}
+          <div className="grid grid-cols-3 gap-4 mt-4">
+  {[
+    { name: "Wrinkles", color: "green", image: wrinkless },
+    { name: "Dark spot", color: "green", image: darkSpots },
+    { name: "Redness", color: "yellow", image: redness },
+    { name: "Acne", color: "yellow", image: acne },
+    { name: "Texture", color: "green", image: wrinkles },
+    { name: "Hydration", color: "red", image: hydration },
+    { name: "Pore Size", color: "green", image: pore },
+    { name: "Dark Circles", color: "yellow", image: darkcircles },
+    { name: "Sun Damage", color: "yellow", image: uv },
+    { name: "Firmness", color: "red", image: firmness }
+  ].map((issue, index) => (
+    <div key={index} className="flex flex-col items-center" onClick={handleWrinkleIcon}>
+      <div className="relative">
+        <svg width="80" height="80">
+          <circle cx="40" cy="40" r="35" stroke="#E5E5E5" strokeWidth="6" fill="none" />
+          <circle
+            cx="40"
+            cy="40"
+            r="35"
+            stroke={issue.color === "green" ? "#22AD5C" : issue.color === "yellow" ? "#FBC02D" : "#E53935"}
+            strokeWidth="6"
+            fill="none"
+            strokeDasharray="220"
+            strokeDashoffset="50"
+            strokeLinecap="round"
+          />
+        </svg>
+        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+          <img src={issue.image} alt={issue.name} className="w-10 h-7" />
+        </div>
+      </div>
+      <p className=" flex items-center text-sm mt-1">{issue.name} <spann><img src={chevron} alt="rightArrow" className=" rotate-180 w-[16px] mt-[2px]" /></spann></p>
+    </div>
+  ))}
+
           </div>
+            <div className="border border-[#9E9E9E] w-[350px] mt-8 h-0"></div>
+            <p className="flex text-center justify-center text-[16px] leading-[24px] text-[#303030] font-semibold mt-5">Earn <img src={gem} alt="jade" className="w-[24px]" /> x10 by share result with friends</p>
+            <div className="flex justify-center"> 
+            <button className="text-[16px] leading-6 flex text-[#303030] w-[249px] h-[48px] border border-[#303030] py-[12px]
+            px-[17px] gap-[8px] rounded-[50px] mt-3"><img src={closeIcon} alt="" />Share result with friends</button>
+            </div>
+            <div className="w-[350px] h-[162px] py-[24px] px-[33px] gap-[18px] bg-[#C2F3D6] rounded-[10px] my-9">
+              <div className="w-[310px] h-[52px]">
+                <div className="flex gap-3 items-center">
+                <img src={request} alt="requestlogo" className="w-[40px] h-[40px]" />
+                <p className="text-[18px] leading-[26px] w-[258px]  text-[#303030] font-semibold">Did you know your skincare products are good for you?</p>
+                </div>
+                <button className="text-[16px] rounded-md mt-5 leading-6 bg-[#303030] w-[274px] h-[44px] text-white">Check with Product Scanner</button>
+              </div>
+            </div>
         </div>
       </div>
     </div>
