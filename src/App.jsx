@@ -27,6 +27,9 @@ import PerceivedSkinAge from "./assets/components/PercievedSkinAge";
 import FacialSkinAnalysisResult from "./assets/components/FacialSkinAnalysisResult";
 import AnalysisInfo from "./assets/components/AnalysisInfo";
 import WrinklesSection from "./assets/components/WrinklesSection";
+import Retinoids from "./assets/components/Retinoids";
+import VitaminC from "./assets/components/VitaminC";
+import SkinCareInsights from "./assets/components/SkinCareInsights";
 
 
 function App() {
@@ -61,6 +64,9 @@ function App() {
           <Route path="/project-glow/analysisresult" element={<FacialSkinAnalysisResult />}/>
           <Route path="/project-glow/info" element={<AnalysisInfo />}/>
           <Route path="/project-glow/wrinkles" element={<WrinklesSection />}/>
+          <Route path="/project-glow/retinoids" element={<Retinoids />}/>
+          <Route path="/project-glow/vitaminc" element={<VitaminC />}/>
+          <Route path="/project-glow/text" element={<SkinCareInsights />}/>
         </Routes>
       </div>
     </Router>

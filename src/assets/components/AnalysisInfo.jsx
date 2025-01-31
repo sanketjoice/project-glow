@@ -1,15 +1,22 @@
 import React from 'react';
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
+import { useNavigate } from "react-router-dom";
 
 
 const AnalysisInfo = () => {
+  const navigate = useNavigate();
+
+  const handleNextClick = () => {
+    navigate("/project-glow/analysisresult"); 
+  };
   return (
     <div className="w-[390px] mx-auto bg-[#F4F7F2] mt-3 pt-1">
       {/* Close button container */}
       <img
                   src={closeIcon}
                   className="text-gray-700 w-[24px] h-[24px] cursor-pointer flex place-self-end mr-7 mt-5"
-                  alt="Close Icon"/>
+                  alt="Close Icon"
+                  onClick={handleNextClick}/>
 
       {/* Content container with specific mobile padding */}
       <div className="px-6 py-2 mt-7">

@@ -18,6 +18,7 @@ import gem from "./Project Glow - Design Assets/Icons/jade.png";
 import request from "./Project Glow - Design Assets/SVG Selected/request.svg";
 
 
+
 export default function FacialSkinAnalysisResult() {
   const navigate = useNavigate("/project-glow/info");
   const handleInfoClick = () => {
@@ -248,7 +249,7 @@ export default function FacialSkinAnalysisResult() {
     { name: "Sun Damage", color: "yellow", image: uv },
     { name: "Firmness", color: "red", image: firmness }
   ].map((issue, index) => (
-    <div key={index} className="flex flex-col items-center" onClick={handleWrinkleIcon}>
+    <div key={index} className="flex hover:cursor-pointer flex-col items-center" onClick={handleWrinkleIcon}>
       <div className="relative">
         <svg width="80" height="80">
           <circle cx="40" cy="40" r="35" stroke="#E5E5E5" strokeWidth="6" fill="none" />
