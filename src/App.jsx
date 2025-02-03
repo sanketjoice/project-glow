@@ -30,6 +30,8 @@ import WrinklesSection from "./assets/components/WrinklesSection";
 import Retinoids from "./assets/components/Retinoids";
 import VitaminC from "./assets/components/VitaminC";
 import SkinCareInsights from "./assets/components/SkinCareInsights";
+import Home from "./assets/components/Home";
+import Checkin from "./assets/components/Checkin";
 
 
 function App() {
@@ -67,6 +69,8 @@ function App() {
           <Route path="/project-glow/retinoids" element={<Retinoids />}/>
           <Route path="/project-glow/vitaminc" element={<VitaminC />}/>
           <Route path="/project-glow/text" element={<SkinCareInsights />}/>
+          <Route path="/project-glow/home" element={<Home />}/>
+          <Route path="/project-glow/checkin" element={<Checkin />}/>
         </Routes>
       </div>
     </Router>
