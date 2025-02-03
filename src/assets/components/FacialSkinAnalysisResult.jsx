@@ -26,6 +26,10 @@ export default function FacialSkinAnalysisResult() {
   };
   const handleWrinkleIcon = () => {
     navigate("/project-glow/wrinkles");
+
+  };
+  const handleLeftClick = () => {
+    navigate("/project-glow/home");
   };
 
   const formatDate = (date) => {
@@ -50,6 +54,7 @@ export default function FacialSkinAnalysisResult() {
             src={leftArrow}
             className="text-gray-700 w-[24px] h-[24px] cursor-pointer"
             alt="Left Arrow"
+            onClick={handleLeftClick}
           />
           <p className="text-black text-[16px]">{formattedDate}</p>
           <img

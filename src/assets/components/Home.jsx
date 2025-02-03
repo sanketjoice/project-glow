@@ -203,7 +203,7 @@ export default function Home() {
         Did you get enough rest? Poor sleep affects skin’s ability to repair itself, so aim for at least 7-8 hours.
         </p>
       </div>
-    </div>
+ </div>
  <div className="w-[350px] p-4 border border-[#BDBDBD] rounded-xl bg-[#F4F7F2] ml-4 mt-3 flex items-start gap-4">
       <img src={medical} alt="PM2.5 Log" className="w-12 h-12" />
       <div>
@@ -212,7 +212,7 @@ export default function Home() {
         Remember, products with fragrance may irritate sensitive skin. Check labels carefully!
         </p>
       </div>
-    </div>
+ </div>
         </div>
         <div className="bg-[#DDD6FE] rounded-[10px] w-[350px] h-[118px] mx-4 mt-4 items-center justify-center p-5">
             <div className="flex justify-center items-center gap-[10px]">
@@ -249,7 +249,7 @@ export default function Home() {
         <img src={skincare} className="w-6 h-6" />
         <span className="mt-1 text-[12px]">My Shelf</span>
       </div>
-    </div>
+ </div>
 
     </div>
     </div>
