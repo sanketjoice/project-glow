@@ -27,6 +27,9 @@ export default function Home() {
   const handleButtonclick = () => {
     navigate("/project-glow/skinanlysishome")
   }
+  const handleProfileClick = () => {
+    navigate("/project-glow/userprofile"); 
+  };
     const dates = [11, 12, 13, 14, 16, 17, 18];
   const status = ["full", "full", "full", "half", "half", "full", "empty"];
 
@@ -41,7 +44,8 @@ export default function Home() {
           <span className="text-[12px]">1</span>
           <img src={gem} alt="Gem" className="w-[24px]" />
           <span className="text-[12px]">10</span>
-          <div className="bg-[#303030] rounded-full w-[38px] h-[38px] flex items-center justify-center text-white font-bold">JC</div>
+          <div className="bg-[#303030] rounded-full w-[38px] h-[38px] flex items-center
+           hover:cursor-pointer justify-center text-white font-bold" onClick={handleProfileClick}>JC</div>
         </div>
       </div>
 

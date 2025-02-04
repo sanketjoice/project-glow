@@ -34,6 +34,7 @@ import Home from "./assets/components/Home";
 import Checkin from "./assets/components/Checkin";
 import SkinAnalysisHome from "./assets/components/SkinAnalysisHome";
 import DailyTracker from "./assets/components/DailyTracker";
+import UserProfileHome from "./assets/components/UserProfileHome";
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           <Route path="/project-glow/checkin" element={<Checkin />}/>
           <Route path="project-glow/skinanlysishome" element={<SkinAnalysisHome />}/>
           <Route path="/project-glow/dailytracker" element={<DailyTracker />}/>
+          <Route path="/project-glow/userprofile" element={<UserProfileHome />}/>
         </Routes>
       </div>
     </Router>
