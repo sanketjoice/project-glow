@@ -17,29 +17,46 @@ export default function QuestionnaireComponent() {
   const [location, setLocation] = useState("");
   const [showGender, setShowGender] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
-
+  
   const navigate = useNavigate();
-
+  
   const handleMonthChange = (e) => {
     const value = e.target.value;
-    setMonth(value);
-    checkShowGender(value, year);
+  
+    // Allow only digits up to 2 characters
+    if (/^\d{0,2}$/.test(value)) {
+      // Check for valid range: 1-12, including leading zeros (e.g., 01, 02)
+      if (value === "" || (/^(0?[1-9]|1[0-2])$/.test(value))) {
+        setMonth(value);
+        checkShowGender(value, year);
+      }
+    }
   };
-
+  
   const handleYearChange = (e) => {
     const value = e.target.value;
-    setYear(value);
-    checkShowGender(month, value);
+    const currentYear = new Date().getFullYear();
+  
+    if (/^\d{0,4}$/.test(value)) { // Allows up to 4 digits
+      setYear(value); // Allow input while typing
+  
+      if (value.length === 4 && (parseInt(value) >= 1900 && parseInt(value) <= currentYear)) {
+        checkShowGender(month, value);
+      } else if (value.length === 4) {
+        // Invalid year entered
+        setShowGender(false);
+        setShowLocation(false);
+      }
+    }
   };
 
   const handleGenderChange = (e) => {
     const value = e.target.value; // Get the selected value
     setGender(value); // Update the GenderContext value 
-    
+  
     checkShowLocation(month, year, value); 
   };
   
-
   const checkShowGender = (monthValue, yearValue) => {
     if (monthValue && yearValue && yearValue.length === 4) {
       setShowGender(true);
@@ -48,7 +65,7 @@ export default function QuestionnaireComponent() {
       setShowLocation(false); // Reset location if gender is hidden
     }
   };
-
+  
   const checkShowLocation = (monthValue, yearValue, genderValue) => {
     if (monthValue && yearValue && genderValue && yearValue.length === 4) {
       setShowLocation(true);
@@ -56,12 +73,13 @@ export default function QuestionnaireComponent() {
       setShowLocation(false);
     }
   };
-
+  
   const handleNextClick = () => {
     navigate("/project-glow/skin-type");
   };
-
+  
   const isButtonDisabled = !month || !year || !gender || !location;
+
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -421,6 +439,7 @@ export default function QuestionnaireComponent() {
                   <option value="Serbia">Serbia</option>
                   <option value="Zambia">Zambia</option>
                   <option value="Zimbabwe">Zimbabwe</option>
+                  
                 </select>
                 <p className="text-[#4B5563] text-[12px] leading-[20px] text-start">
                   We collect environmental data that reveal how external factors

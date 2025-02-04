@@ -24,15 +24,17 @@ export default function Home() {
   const handleTextClick = () => {
     navigate("/project-glow/analysisresult"); 
   };
+  const handleButtonclick = () => {
+    navigate("/project-glow/skinanlysishome")
+  }
     const dates = [11, 12, 13, 14, 16, 17, 18];
   const status = ["full", "full", "full", "half", "half", "full", "empty"];
 
   return (
     <div className="flex justify-center items-start min-h-screen bg-white overflow-y-auto">
-
-      <div className="w-[390px]  rounded-xl shadow-lg flex flex-col bg-[#F4F7F2]">
-      {/* Header */}
-      <div className="flex justify-between h-[54px] py-[8px] px-[20px] bg-[#F4F7F2] items-center mb-4">
+  <div className="w-[390px] rounded-xl shadow-lg flex flex-col bg-[#F4F7F2]">
+    {/* Header */}
+    <div className="flex justify-between items-center h-[54px] fixed w-full max-w-[390px] py-[8px] px-[20px] bg-[#F4F7F2] z-10">
         <img src={logo} alt="GlowSkin Logo" className="w-[110px] h-[28px]" />
         <div className="flex items-center space-x-2">
           <img src={badge} alt="Medal" className="h-[24px] w-[24px]" />
@@ -44,7 +46,7 @@ export default function Home() {
       </div>
 
       {/* Greeting */}
-      <div className="bg-[#E2E7DF] flex p-4 mb-4 gap-4">
+      <div className="bg-[#E2E7DF] flex p-4 mb-4 gap-4 z-10 fixed mt-[54px] w-full max-w-[390px]">
         <div>
         <h2 className="text-[18px] text-[#303030] font-semibold">Good morning Jane!</h2>
         <p className="text-[16px] text-black">How's your skin feeling?</p>
@@ -54,7 +56,7 @@ export default function Home() {
       </div>
 
       {/* Calendar */}
-      <div className="flex justify-between px-4">
+      <div className="flex justify-between mt-[150px] px-4">
         <p className="text-[#303030] text-[14px]">November 2024</p>
         <p className="text-[#303030] text-[14px]">Today</p>
       </div>
@@ -214,7 +216,7 @@ export default function Home() {
       </div>
  </div>
         </div>
-        <div className="bg-[#DDD6FE] rounded-[10px] w-[350px] h-[118px] mx-4 mt-4 items-center justify-center p-5">
+        <div className="bg-[#DDD6FE] rounded-[10px] w-[350px] mb-[100px] h-[118px] mx-4 mt-4 items-center justify-center p-5">
             <div className="flex justify-center items-center gap-[10px]">
             <div className="w-[25px] border border-[#303030] h-0"></div>
             <p className="text-[16px]">Myth buster</p>
@@ -223,14 +225,15 @@ export default function Home() {
             <p className="text-[16px] font-semibold text-center">Natural Ingredients Are Always Better?</p>
             <p className="underline text-[14px] text-center">Did you know?</p>
         </div>
-        <div className=" bottom-0 w-[390px] mt-10 bg-[#303030] px-5 py-4 flex justify-around items-center">
+        <div className=" bottom-0 w-[390px] mt-10 bg-[#303030] fixed px-5 py-4 flex justify-around items-center">
       <div className="flex flex-col items-center text-white">
         <img src={g} className="w-6 h-6" />
         <span className="mt-1 text-[12px]">Home</span>
         <div className="w-8 h-0.5 bg-white mt-1" />
       </div>
 
-      <div className="flex flex-col items-center text-white">
+      <div className="flex flex-col items-center text-white hover:cursor-pointer"
+      onClick={handleButtonclick}>
         <img src={analysis} className="w-6 h-6" />
         <span className="mt-1 text-[12px]">Skin Analysis</span>
       </div>

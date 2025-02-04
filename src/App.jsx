@@ -32,6 +32,8 @@ import VitaminC from "./assets/components/VitaminC";
 import SkinCareInsights from "./assets/components/SkinCareInsights";
 import Home from "./assets/components/Home";
 import Checkin from "./assets/components/Checkin";
+import SkinAnalysisHome from "./assets/components/SkinAnalysisHome";
+import DailyTracker from "./assets/components/DailyTracker";
 
 
 function App() {
@@ -71,6 +73,8 @@ function App() {
           <Route path="/project-glow/text" element={<SkinCareInsights />}/>
           <Route path="/project-glow/home" element={<Home />}/>
           <Route path="/project-glow/checkin" element={<Checkin />}/>
+          <Route path="project-glow/skinanlysishome" element={<SkinAnalysisHome />}/>
+          <Route path="/project-glow/dailytracker" element={<DailyTracker />}/>
         </Routes>
       </div>
     </Router>
