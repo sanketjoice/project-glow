@@ -6,13 +6,23 @@ export default function PerceivedSkinAge() {
   const navigate = useNavigate();
 
   const handleNextClick = () => {
-    navigate("/project-glow/analysisresult"); 
+    navigate("/project-glow/analysisresult");
   };
 
   const formatDate = (date) => {
     const months = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     const day = String(date.getDate()).padStart(2, "0");
     const month = months[date.getMonth()];
@@ -33,11 +43,21 @@ export default function PerceivedSkinAge() {
 
         {/* Content */}
         <div className="flex flex-col justify-center items-center mt-6 gap-4">
-          <h6 className="text-[20px] font-semibold text-gray-800">Perceived Skin Age</h6>
-          <img src={ConfettiLogo} alt="Confetti Logo" className="w-[200px] mt-5 h-[200px]" />
+          <h6 className="text-[20px] font-semibold text-gray-800">
+            Perceived Skin Age
+          </h6>
+          <img
+            src={ConfettiLogo}
+            alt="Confetti Logo"
+            className="w-[200px] mt-5 h-[200px]"
+          />
           <div className="flex flex-col items-center">
-            <p className="text-[72px] leading-[58px] font-semibold text-[#303030]">12</p>
-            <p className="text-[28px] leading-[58px] font-medium text-[#303030]">years younger</p>
+            <p className="text-[72px] leading-[58px] font-semibold text-[#303030]">
+              12
+            </p>
+            <p className="text-[28px] leading-[58px] font-medium text-[#303030]">
+              years younger
+            </p>
           </div>
         </div>
 

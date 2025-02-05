@@ -43,12 +43,14 @@ export default function IngredientPreferences() {
           <img
             src={leftArrow}
             className="text-gray-700 w-[24px] h-[24px] cursor-pointer"
-            alt="Left Arrow"/>
+            alt="Left Arrow"
+          />
           <img src={logo} alt="GlowSkin Logo" className="w-[110px] h-[28px]" />
           <img
             src={closeIcon}
             className="text-gray-700 w-[24px] h-[24px] cursor-pointer"
-            alt="Close Icon"/>
+            alt="Close Icon"
+          />
         </div>
 
         {/* Step Indicator */}
@@ -69,17 +71,17 @@ export default function IngredientPreferences() {
         {/* Question Section */}
         <div className="flex flex-col items-center px-6 text-center">
           <div className="flex items-center gap-4 ml-5 mb-12">
-                    <div className="bg-[#F0F7EF] rounded-full mt-8">
-                      <img
-                        src={preferenceIcon}
-                        alt="Skin Icon"
-                        className="w-[70px] h-[70px]"
-                      />
-                    </div>
-                    <h1 className="w-[240px] h-[60px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
-                    Do you have any specific ingredient preferences or restrictions?
-                    </h1>
-                  </div>
+            <div className="bg-[#F0F7EF] rounded-full mt-8">
+              <img
+                src={preferenceIcon}
+                alt="Skin Icon"
+                className="w-[70px] h-[70px]"
+              />
+            </div>
+            <h1 className="w-[240px] h-[60px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
+              Do you have any specific ingredient preferences or restrictions?
+            </h1>
+          </div>
 
           {/* Answer Options */}
           <div className="flex flex-col gap-[14px] mt-8 h-auto w-[330px]">
@@ -92,7 +94,9 @@ export default function IngredientPreferences() {
                     checked={selectedOptions.includes(option)}
                     onChange={() => handleOptionClick(option)}
                   />
-                  <span className="text-[#303030] leading-[22px] text-[14px]">{option}</span>
+                  <span className="text-[#303030] leading-[22px] text-[14px]">
+                    {option}
+                  </span>
                 </label>
                 {option === "I avoid specific active ingredients" &&
                   selectedOptions.includes(option) && (
@@ -111,7 +115,10 @@ export default function IngredientPreferences() {
 
         {/* Footer Buttons */}
         <div className="mt-[200px] mb-6 flex justify-between px-6">
-          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+          <button
+            className="text-[16px] text-gray-500 underline"
+            onClick={handleNextClick}
+          >
             Skip
           </button>
           <button

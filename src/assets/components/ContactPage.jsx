@@ -29,8 +29,8 @@ const ContactPage = () => {
               </h2>
               <p className="text-[14px] sm:text-[16px] leading-5 sm:leading-6 pb-4 sm:pb-6">
                 Be part of the community that values innovation, science, and
-                sustainability. Together, we can create a healthier, more radiant
-                future for our skin.
+                sustainability. Together, we can create a healthier, more
+                radiant future for our skin.
               </p>
             </div>
 
@@ -59,8 +59,8 @@ const ContactPage = () => {
                 Privacy Notice
               </h2>
               <p className="text-[12px] sm:text-[14px] leading-5 sm:leading-6">
-                Your privacy is crucial to us. We are committed to protecting your
-                personal information with the highest standard of security.
+                Your privacy is crucial to us. We are committed to protecting
+                your personal information with the highest standard of security.
               </p>
             </div>
           </div>

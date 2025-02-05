@@ -3,7 +3,7 @@ import logo from "../components/Project Glow - Design Assets/Project Glow Logo/P
 import leftArrow from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import gem from "./Project Glow - Design Assets/SVG Selected/gem-green.svg";
-import hormonalIcon from "./Project Glow - Design Assets/Icons/SVG/menstrual-cycle.svg"; 
+import hormonalIcon from "./Project Glow - Design Assets/Icons/SVG/menstrual-cycle.svg";
 import logoOne from "./Project Glow - Design Assets/Icons/SVG/love (1).svg";
 import logoTwo from "./Project Glow - Design Assets/Icons/SVG/account.svg";
 import { useNavigate } from "react-router-dom";
@@ -51,7 +51,7 @@ export default function HormonalQuestion() {
 
         {/* Question Section */}
         <div className="flex flex-col items-center px-6 text-center ">
-          <div className="flex items-center gap-2"> 
+          <div className="flex items-center gap-2">
             <div className="bg-[#F0F7EF] rounded-full p-4">
               <img
                 src={hormonalIcon}
@@ -60,7 +60,8 @@ export default function HormonalQuestion() {
               />
             </div>
             <h1 className="mt-4 w-[240px] h-[120px] text-[24px] mb-1 leading-[30px] text-start font-semibold text-[#303030]">
-            Do you experience hormonal changes that affect your skin during your cycle?
+              Do you experience hormonal changes that affect your skin during
+              your cycle?
             </h1>
           </div>
 
@@ -81,48 +82,44 @@ export default function HormonalQuestion() {
             ))}
           </div>
         </div>
-    
+
         {/* Why We Ask Section */}
         <div className="mt-12 p-[16px] mx-6 mb-20 h-[252px] w-[330px]">
-        <div className="bg-[#F0F7EF] border border-[#9CA3AF] rounded-[10px] p-4">
+          <div className="bg-[#F0F7EF] border border-[#9CA3AF] rounded-[10px] p-4">
             {/* Header */}
             <div className="flex items-center gap-2">
-            
-            
-            <p className="text-[14px] leading-[22px] pb-2 font-semibold text-[#303030]">
+              <p className="text-[14px] leading-[22px] pb-2 font-semibold text-[#303030]">
                 Why we ask
-            </p>
+              </p>
             </div>
 
             {/* Main Text */}
             <div className="flex gap-[12px] mb-4 items-start">
-            <img
-                src={logoOne} 
-                alt="Logo 2"
-                className="w-[36px] h-[36px]"
-            />
-            <p className="mt-2 text-[14px] leading-[20px] text-[#111928]">
-            Hormonal changes during your cycle can affect your skin’s oil
-            production, sensitivity, and hydration levels. Sharing this helps us tailor insights to your skin’s unique needs.
-            </p>
+              <img src={logoOne} alt="Logo 2" className="w-[36px] h-[36px]" />
+              <p className="mt-2 text-[14px] leading-[20px] text-[#111928]">
+                Hormonal changes during your cycle can affect your skin’s oil
+                production, sensitivity, and hydration levels. Sharing this
+                helps us tailor insights to your skin’s unique needs.
+              </p>
             </div>
 
             {/* Optional Note */}
             <div className="flex gap-[12px] items-start">
-            <img
-                src={logoTwo} 
-                alt="Logo 1"
-                className="w-[36px] h-[36px]"/>
-            <p className="mt-2 text-[14px] leading-[20px] text-[#111928]">
-            This information is optional, kept private, and used only to improve your skin analysis.
-            </p>
+              <img src={logoTwo} alt="Logo 1" className="w-[36px] h-[36px]" />
+              <p className="mt-2 text-[14px] leading-[20px] text-[#111928]">
+                This information is optional, kept private, and used only to
+                improve your skin analysis.
+              </p>
             </div>
-        </div>
+          </div>
         </div>
 
         {/* Footer Buttons */}
         <div className="mt-auto mb-6 flex justify-between px-6">
-          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+          <button
+            className="text-[16px] text-gray-500 underline"
+            onClick={handleNextClick}
+          >
             Skip
           </button>
           <button

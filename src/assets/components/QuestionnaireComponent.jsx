@@ -9,7 +9,6 @@ import { GenderContext } from "./GenderContext";
 import { useContext } from "react";
 
 export default function QuestionnaireComponent() {
-  
   const { gender, setGender } = useContext(GenderContext);
 
   const [month, setMonth] = useState("");
@@ -17,30 +16,35 @@ export default function QuestionnaireComponent() {
   const [location, setLocation] = useState("");
   const [showGender, setShowGender] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
-  
+
   const navigate = useNavigate();
-  
+
   const handleMonthChange = (e) => {
     const value = e.target.value;
-  
+
     // Allow only digits up to 2 characters
     if (/^\d{0,2}$/.test(value)) {
       // Check for valid range: 1-12, including leading zeros (e.g., 01, 02)
-      if (value === "" || (/^(0?[1-9]|1[0-2])$/.test(value))) {
+      if (value === "" || /^(0?[1-9]|1[0-2])$/.test(value)) {
         setMonth(value);
         checkShowGender(value, year);
       }
     }
   };
-  
+
   const handleYearChange = (e) => {
     const value = e.target.value;
     const currentYear = new Date().getFullYear();
-  
-    if (/^\d{0,4}$/.test(value)) { // Allows up to 4 digits
+
+    if (/^\d{0,4}$/.test(value)) {
+      // Allows up to 4 digits
       setYear(value); // Allow input while typing
-  
-      if (value.length === 4 && (parseInt(value) >= 1900 && parseInt(value) <= currentYear)) {
+
+      if (
+        value.length === 4 &&
+        parseInt(value) >= 1900 &&
+        parseInt(value) <= currentYear
+      ) {
         checkShowGender(month, value);
       } else if (value.length === 4) {
         // Invalid year entered
@@ -52,11 +56,11 @@ export default function QuestionnaireComponent() {
 
   const handleGenderChange = (e) => {
     const value = e.target.value; // Get the selected value
-    setGender(value); // Update the GenderContext value 
-  
-    checkShowLocation(month, year, value); 
+    setGender(value); // Update the GenderContext value
+
+    checkShowLocation(month, year, value);
   };
-  
+
   const checkShowGender = (monthValue, yearValue) => {
     if (monthValue && yearValue && yearValue.length === 4) {
       setShowGender(true);
@@ -65,7 +69,7 @@ export default function QuestionnaireComponent() {
       setShowLocation(false); // Reset location if gender is hidden
     }
   };
-  
+
   const checkShowLocation = (monthValue, yearValue, genderValue) => {
     if (monthValue && yearValue && genderValue && yearValue.length === 4) {
       setShowLocation(true);
@@ -73,13 +77,12 @@ export default function QuestionnaireComponent() {
       setShowLocation(false);
     }
   };
-  
+
   const handleNextClick = () => {
     navigate("/project-glow/skin-type");
   };
-  
-  const isButtonDisabled = !month || !year || !gender || !location;
 
+  const isButtonDisabled = !month || !year || !gender || !location;
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -104,8 +107,8 @@ export default function QuestionnaireComponent() {
               key={index}
               className={`w-[24px] h-[24px] text-white rounded-full py-[2px] 
                 px-[7px] text-[14px] leading-[22px] justify-center text-center border ${
-                step === 1 ? "bg-black" : "bg-gray-300"
-              }`}
+                  step === 1 ? "bg-black" : "bg-gray-300"
+                }`}
             >
               {step}
             </div>
@@ -209,7 +212,9 @@ export default function QuestionnaireComponent() {
                   <option value="Angola">Angola</option>
                   <option value="Anguilla">Anguilla</option>
                   <option value="Antartica">Antarctica</option>
-                  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                  <option value="Antigua and Barbuda">
+                    Antigua and Barbuda
+                  </option>
                   <option value="Argentina">Argentina</option>
                   <option value="Armenia">Armenia</option>
                   <option value="Aruba">Aruba</option>
@@ -227,11 +232,15 @@ export default function QuestionnaireComponent() {
                   <option value="Bermuda">Bermuda</option>
                   <option value="Bhutan">Bhutan</option>
                   <option value="Bolivia">Bolivia</option>
-                  <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+                  <option value="Bosnia and Herzegowina">
+                    Bosnia and Herzegowina
+                  </option>
                   <option value="Botswana">Botswana</option>
                   <option value="Bouvet Island">Bouvet Island</option>
                   <option value="Brazil">Brazil</option>
-                  <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                  <option value="British Indian Ocean Territory">
+                    British Indian Ocean Territory
+                  </option>
                   <option value="Brunei Darussalam">Brunei Darussalam</option>
                   <option value="Bulgaria">Bulgaria</option>
                   <option value="Burkina Faso">Burkina Faso</option>
@@ -241,7 +250,9 @@ export default function QuestionnaireComponent() {
                   <option value="Canada">Canada</option>
                   <option value="Cape Verde">Cape Verde</option>
                   <option value="Cayman Islands">Cayman Islands</option>
-                  <option value="Central African Republic">Central African Republic</option>
+                  <option value="Central African Republic">
+                    Central African Republic
+                  </option>
                   <option value="Chad">Chad</option>
                   <option value="Chile">Chile</option>
                   <option value="China">China</option>
@@ -250,7 +261,9 @@ export default function QuestionnaireComponent() {
                   <option value="Colombia">Colombia</option>
                   <option value="Comoros">Comoros</option>
                   <option value="Congo">Congo</option>
-                  <option value="Congo">Congo, the Democratic Republic of the</option>
+                  <option value="Congo">
+                    Congo, the Democratic Republic of the
+                  </option>
                   <option value="Cook Islands">Cook Islands</option>
                   <option value="Costa Rica">Costa Rica</option>
                   <option value="Cota D'Ivoire">Cote d'Ivoire</option>
@@ -270,15 +283,21 @@ export default function QuestionnaireComponent() {
                   <option value="Eritrea">Eritrea</option>
                   <option value="Estonia">Estonia</option>
                   <option value="Ethiopia">Ethiopia</option>
-                  <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+                  <option value="Falkland Islands">
+                    Falkland Islands (Malvinas)
+                  </option>
                   <option value="Faroe Islands">Faroe Islands</option>
                   <option value="Fiji">Fiji</option>
                   <option value="Finland">Finland</option>
                   <option value="France">France</option>
-                  <option value="France Metropolitan">France, Metropolitan</option>
+                  <option value="France Metropolitan">
+                    France, Metropolitan
+                  </option>
                   <option value="French Guiana">French Guiana</option>
                   <option value="French Polynesia">French Polynesia</option>
-                  <option value="French Southern Territories">French Southern Territories</option>
+                  <option value="French Southern Territories">
+                    French Southern Territories
+                  </option>
                   <option value="Gabon">Gabon</option>
                   <option value="Gambia">Gambia</option>
                   <option value="Georgia">Georgia</option>
@@ -295,8 +314,12 @@ export default function QuestionnaireComponent() {
                   <option value="Guinea-Bissau">Guinea-Bissau</option>
                   <option value="Guyana">Guyana</option>
                   <option value="Haiti">Haiti</option>
-                  <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
-                  <option value="Holy See">Holy See (Vatican City State)</option>
+                  <option value="Heard and McDonald Islands">
+                    Heard and Mc Donald Islands
+                  </option>
+                  <option value="Holy See">
+                    Holy See (Vatican City State)
+                  </option>
                   <option value="Honduras">Honduras</option>
                   <option value="Hong Kong">Hong Kong</option>
                   <option value="Hungary">Hungary</option>
@@ -314,7 +337,9 @@ export default function QuestionnaireComponent() {
                   <option value="Kazakhstan">Kazakhstan</option>
                   <option value="Kenya">Kenya</option>
                   <option value="Kiribati">Kiribati</option>
-                  <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
+                  <option value="Democratic People's Republic of Korea">
+                    Korea, Democratic People's Republic of
+                  </option>
                   <option value="Korea">Korea, Republic of</option>
                   <option value="Kuwait">Kuwait</option>
                   <option value="Kyrgyzstan">Kyrgyzstan</option>
@@ -323,12 +348,16 @@ export default function QuestionnaireComponent() {
                   <option value="Lebanon">Lebanon</option>
                   <option value="Lesotho">Lesotho</option>
                   <option value="Liberia">Liberia</option>
-                  <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                  <option value="Libyan Arab Jamahiriya">
+                    Libyan Arab Jamahiriya
+                  </option>
                   <option value="Liechtenstein">Liechtenstein</option>
                   <option value="Lithuania">Lithuania</option>
                   <option value="Luxembourg">Luxembourg</option>
                   <option value="Macau">Macau</option>
-                  <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+                  <option value="Macedonia">
+                    Macedonia, The Former Yugoslav Republic of
+                  </option>
                   <option value="Madagascar">Madagascar</option>
                   <option value="Malawi">Malawi</option>
                   <option value="Malaysia">Malaysia</option>
@@ -341,7 +370,9 @@ export default function QuestionnaireComponent() {
                   <option value="Mauritius">Mauritius</option>
                   <option value="Mayotte">Mayotte</option>
                   <option value="Mexico">Mexico</option>
-                  <option value="Micronesia">Micronesia, Federated States of</option>
+                  <option value="Micronesia">
+                    Micronesia, Federated States of
+                  </option>
                   <option value="Moldova">Moldova, Republic of</option>
                   <option value="Monaco">Monaco</option>
                   <option value="Mongolia">Mongolia</option>
@@ -353,7 +384,9 @@ export default function QuestionnaireComponent() {
                   <option value="Nauru">Nauru</option>
                   <option value="Nepal">Nepal</option>
                   <option value="Netherlands">Netherlands</option>
-                  <option value="Netherlands Antilles">Netherlands Antilles</option>
+                  <option value="Netherlands Antilles">
+                    Netherlands Antilles
+                  </option>
                   <option value="New Caledonia">New Caledonia</option>
                   <option value="New Zealand">New Zealand</option>
                   <option value="Nicaragua">Nicaragua</option>
@@ -361,7 +394,9 @@ export default function QuestionnaireComponent() {
                   <option value="Nigeria">Nigeria</option>
                   <option value="Niue">Niue</option>
                   <option value="Norfolk Island">Norfolk Island</option>
-                  <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                  <option value="Northern Mariana Islands">
+                    Northern Mariana Islands
+                  </option>
                   <option value="Norway">Norway</option>
                   <option value="Oman">Oman</option>
                   <option value="Pakistan">Pakistan</option>
@@ -380,12 +415,18 @@ export default function QuestionnaireComponent() {
                   <option value="Romania">Romania</option>
                   <option value="Russia">Russian Federation</option>
                   <option value="Rwanda">Rwanda</option>
-                  <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+                  <option value="Saint Kitts and Nevis">
+                    Saint Kitts and Nevis
+                  </option>
                   <option value="Saint Lucia">Saint LUCIA</option>
-                  <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+                  <option value="Saint Vincent">
+                    Saint Vincent and the Grenadines
+                  </option>
                   <option value="Samoa">Samoa</option>
                   <option value="San Marino">San Marino</option>
-                  <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+                  <option value="Sao Tome and Principe">
+                    Sao Tome and Principe
+                  </option>
                   <option value="Saudi Arabia">Saudi Arabia</option>
                   <option value="Senegal">Senegal</option>
                   <option value="Seychelles">Seychelles</option>
@@ -396,14 +437,20 @@ export default function QuestionnaireComponent() {
                   <option value="Solomon Islands">Solomon Islands</option>
                   <option value="Somalia">Somalia</option>
                   <option value="South Africa">South Africa</option>
-                  <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+                  <option value="South Georgia">
+                    South Georgia and the South Sandwich Islands
+                  </option>
                   <option value="Span">Spain</option>
                   <option value="Sri Lanka">Sri Lanka</option>
                   <option value="St. Helena">St. Helena</option>
-                  <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+                  <option value="St. Pierre and Miguelon">
+                    St. Pierre and Miquelon
+                  </option>
                   <option value="Sudan">Sudan</option>
                   <option value="Suriname">Suriname</option>
-                  <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+                  <option value="Svalbard">
+                    Svalbard and Jan Mayen Islands
+                  </option>
                   <option value="Swaziland">Swaziland</option>
                   <option value="Sweden">Sweden</option>
                   <option value="Switzerland">Switzerland</option>
@@ -415,31 +462,44 @@ export default function QuestionnaireComponent() {
                   <option value="Togo">Togo</option>
                   <option value="Tokelau">Tokelau</option>
                   <option value="Tonga">Tonga</option>
-                  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                  <option value="Trinidad and Tobago">
+                    Trinidad and Tobago
+                  </option>
                   <option value="Tunisia">Tunisia</option>
                   <option value="Turkey">Turkey</option>
                   <option value="Turkmenistan">Turkmenistan</option>
-                  <option value="Turks and Caicos">Turks and Caicos Islands</option>
+                  <option value="Turks and Caicos">
+                    Turks and Caicos Islands
+                  </option>
                   <option value="Tuvalu">Tuvalu</option>
                   <option value="Uganda">Uganda</option>
                   <option value="Ukraine">Ukraine</option>
-                  <option value="United Arab Emirates">United Arab Emirates</option>
+                  <option value="United Arab Emirates">
+                    United Arab Emirates
+                  </option>
                   <option value="United Kingdom">United Kingdom</option>
-                  <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                  <option value="United States Minor Outlying Islands">
+                    United States Minor Outlying Islands
+                  </option>
                   <option value="Uruguay">Uruguay</option>
                   <option value="Uzbekistan">Uzbekistan</option>
                   <option value="Vanuatu">Vanuatu</option>
                   <option value="Venezuela">Venezuela</option>
                   <option value="Vietnam">Viet Nam</option>
-                  <option value="Virgin Islands (British)">Virgin Islands (British)</option>
-                  <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
-                  <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+                  <option value="Virgin Islands (British)">
+                    Virgin Islands (British)
+                  </option>
+                  <option value="Virgin Islands (U.S)">
+                    Virgin Islands (U.S.)
+                  </option>
+                  <option value="Wallis and Futana Islands">
+                    Wallis and Futuna Islands
+                  </option>
                   <option value="Western Sahara">Western Sahara</option>
                   <option value="Yemen">Yemen</option>
                   <option value="Serbia">Serbia</option>
                   <option value="Zambia">Zambia</option>
                   <option value="Zimbabwe">Zimbabwe</option>
-                  
                 </select>
                 <p className="text-[#4B5563] text-[12px] leading-[20px] text-start">
                   We collect environmental data that reveal how external factors

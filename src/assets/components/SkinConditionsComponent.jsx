@@ -8,10 +8,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function SkinConditionsComponent() {
   const navigate = useNavigate();
-  
-    const handleNextClick = () => {
-        navigate("/project-glow/ingredients");
-      };
+
+  const handleNextClick = () => {
+    navigate("/project-glow/ingredients");
+  };
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   const options = [
@@ -31,7 +31,9 @@ export default function SkinConditionsComponent() {
         setSelectedOptions([option]);
       } else {
         setSelectedOptions(
-          selectedOptions.filter((item) => item !== "None of the above").concat(option)
+          selectedOptions
+            .filter((item) => item !== "None of the above")
+            .concat(option)
         );
       }
     }
@@ -75,11 +77,7 @@ export default function SkinConditionsComponent() {
         {/* Question */}
         <div className="flex items-center gap-4 ml-8">
           <div className="bg-[#F0F7EF] rounded-full mt-8">
-            <img
-              src={skinIcon}
-              alt="Skin Icon"
-              className="w-[70px] h-[70px]"
-            />
+            <img src={skinIcon} alt="Skin Icon" className="w-[70px] h-[70px]" />
           </div>
           <h1 className="w-[240px] h-[60px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
             Do you have any skin conditions or sensitivities we should be aware
@@ -90,7 +88,10 @@ export default function SkinConditionsComponent() {
         {/* Options */}
         <div className="flex flex-col gap-4 mt-14 px-6">
           {options.map((option, index) => (
-            <label key={index} className="flex items-center gap-3 cursor-pointer">
+            <label
+              key={index}
+              className="flex items-center gap-3 cursor-pointer"
+            >
               <input
                 type="checkbox"
                 className="w-[32px] h-[32px] cursor-pointer"
@@ -104,7 +105,9 @@ export default function SkinConditionsComponent() {
 
         {/* Footer */}
         <div className="mt-[300px] mb-6 flex justify-between px-6">
-          <button className="text-gray-500 underline" onClick={handleNextClick}>Skip</button>
+          <button className="text-gray-500 underline" onClick={handleNextClick}>
+            Skip
+          </button>
           <button
             className={`w-[188px] py-[12px] h-[48px] rounded-lg shadow-lg flex items-center justify-center text-[16px] ${
               isCTAEnabled
@@ -114,7 +117,8 @@ export default function SkinConditionsComponent() {
             disabled={!isCTAEnabled}
             onClick={handleNextClick}
           >
-            Earn 1 x <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px] ml-2" />
+            Earn 1 x{" "}
+            <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px] ml-2" />
           </button>
         </div>
       </div>

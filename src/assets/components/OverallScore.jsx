@@ -9,8 +9,18 @@ export default function OverallScore() {
   // Function to format date
   const formatDate = (date) => {
     const months = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     const day = String(date.getDate()).padStart(2, "0"); // Add leading zero
     const month = months[date.getMonth()];
@@ -41,7 +51,9 @@ export default function OverallScore() {
 
         {/* Main Content */}
         <div className="flex flex-col justify-center items-center mt-6">
-          <h6 className="text-[24px] leading-[30px] font-semibold">Overall Skin Score</h6>
+          <h6 className="text-[24px] leading-[30px] font-semibold">
+            Overall Skin Score
+          </h6>
           <div className="relative flex flex-col items-center justify-center mt-14">
             {/* SVG Circle */}
             <svg width="232" height="232">
@@ -76,7 +88,11 @@ export default function OverallScore() {
           </div>
 
           {/* Fireworks Logo */}
-          <img src={FireworksLogo} alt="Fireworks" className="mt-[-190px] absolute w-[132px] h-[132px]" />
+          <img
+            src={FireworksLogo}
+            alt="Fireworks"
+            className="mt-[-190px] absolute w-[132px] h-[132px]"
+          />
 
           {/* Additional Text */}
           <p className="mt-[20px] text-[16px] leading-[24px] w-[232px] h-[48px] text-center text-[#555]">

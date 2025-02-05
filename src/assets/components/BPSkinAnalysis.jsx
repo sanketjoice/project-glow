@@ -32,41 +32,54 @@ export default function BPSkinAnalysis() {
           <div className="space-y-6">
             {/* Feature 1 */}
             <div className="flex items-start">
-              <img src={logoOne} alt="" className="w-[40px] sm:w-[50px] md:w-[60px]" />
+              <img
+                src={logoOne}
+                alt=""
+                className="w-[40px] sm:w-[50px] md:w-[60px]"
+              />
               <div className="pl-4">
                 <h3 className="text-[16px] sm:text-[18px] font-semibold mb-2">
                   Extensively Trained Models
                 </h3>
                 <p className="text-[14px] sm:text-[16px]">
-                  Our technology has been trained on a diverse dataset of 100,000+ images to
-                  ensure high accuracy and reliability.
+                  Our technology has been trained on a diverse dataset of
+                  100,000+ images to ensure high accuracy and reliability.
                 </p>
               </div>
             </div>
 
             {/* Feature 2 */}
             <div className="flex items-start">
-              <img src={logoTwo} alt="" className="w-[40px] sm:w-[50px] md:w-[60px]" />
+              <img
+                src={logoTwo}
+                alt=""
+                className="w-[40px] sm:w-[50px] md:w-[60px]"
+              />
               <div className="pl-4">
                 <h3 className="text-[16px] sm:text-[18px] font-semibold mb-2">
                   Sophisticated Skin Diagnostics
                 </h3>
                 <p className="text-[14px] sm:text-[16px]">
-                  Capable of identifying over 100 unique skin
-                  conditions, our system sets a new standard in dermatological diagnostics.
+                  Capable of identifying over 100 unique skin conditions, our
+                  system sets a new standard in dermatological diagnostics.
                 </p>
               </div>
             </div>
 
             {/* Feature 3 */}
             <div className="flex items-start">
-              <img src={logoThree} alt="" className="w-[40px] sm:w-[50px] md:w-[60px]" />
+              <img
+                src={logoThree}
+                alt=""
+                className="w-[40px] sm:w-[50px] md:w-[60px]"
+              />
               <div className="pl-4">
                 <h3 className="text-[16px] sm:text-[18px] font-semibold mb-2">
                   Ingredient-Focused Product Matching
                 </h3>
                 <p className="text-[14px] sm:text-[16px]">
-                  Dynamically recommends products based on specific skin requirements.
+                  Dynamically recommends products based on specific skin
+                  requirements.
                 </p>
               </div>
             </div>

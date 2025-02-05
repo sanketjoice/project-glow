@@ -31,7 +31,9 @@ function RecommendationSection() {
               className="w-[52px] h-[52px] flex-shrink-0"
             />
             <div>
-              <h3 className="text-lg lg:text-[18px] font-semibold mb-1">Seamless Integration</h3>
+              <h3 className="text-lg lg:text-[18px] font-semibold mb-1">
+                Seamless Integration
+              </h3>
               <p className="text-gray-600 text-base lg:text-[16px] leading-6 w-auto lg:w-[378px]">
                 Our AI seamlessly fits into your e-commerce or brick-and-mortar
                 setup.
@@ -65,7 +67,9 @@ function RecommendationSection() {
               className="w-[52px] h-[52px] flex-shrink-0"
             />
             <div>
-              <h3 className="text-lg lg:text-[18px] font-semibold mb-1">Instant Analysis</h3>
+              <h3 className="text-lg lg:text-[18px] font-semibold mb-1">
+                Instant Analysis
+              </h3>
               <p className="text-gray-600 text-base lg:text-[16px] leading-6 w-auto lg:w-[378px]">
                 Our system rapidly processes the data, pinpointing essential
                 skin health metrics.

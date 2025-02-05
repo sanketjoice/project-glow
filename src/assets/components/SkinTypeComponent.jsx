@@ -7,7 +7,6 @@ import skinTypeImg from "./Project Glow - Design Assets/Icons/SVG/skin-type.svg"
 import { useNavigate } from "react-router-dom";
 
 export default function SkinTypeComponent() {
-    
   const [skinType, setSkinType] = useState("");
   const [sensitive, setSensitive] = useState("");
 
@@ -147,4 +146,3 @@ export default function SkinTypeComponent() {
     </div>
   );
 }
-

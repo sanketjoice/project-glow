@@ -10,9 +10,9 @@ const firebaseConfig = {
   authDomain: "project-glow-2cc22.firebaseapp.com",
   projectId: "project-glow-2cc22",
   storageBucket: "project-glow-2cc22.firebasestorage.app",
-  messagingSenderId: "866888335031", 
-  appId: "1:866888335031:web:aacd53f78855360a3d5732"
-}; 
+  messagingSenderId: "866888335031",
+  appId: "1:866888335031:web:aacd53f78855360a3d5732",
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import logo from "../components/Project Glow - Design Assets/Project Glow Logo/PG-Skin logo-dark.svg";
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "./firebase";
 import { FaGoogle, FaFacebook, FaApple, FaEnvelope } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Congratulations from "./Congratulations"; 
+import Congratulations from "./Congratulations";
 
 const Login = () => {
   const [showCongratulations, setShowCongratulations] = useState(false); // State to toggle the Congratulations screen
@@ -62,9 +59,7 @@ const Login = () => {
             </div>
             {/* Social Buttons */}
             <div className="h-[168px] w-[330px] gap-3 flex flex-col items-center mt-[50px]">
-              <button
-                className="flex items-center text-center gap-2 w-64 px-[24px] py-[12px] bg-blue-600 text-white rounded-[6px] mb-3"
-              >
+              <button className="flex items-center text-center gap-2 w-64 px-[24px] py-[12px] bg-blue-600 text-white rounded-[6px] mb-3">
                 <FaFacebook />
                 Continue with Facebook
               </button>
@@ -75,9 +70,7 @@ const Login = () => {
                 <FaGoogle />
                 Continue with Google
               </button>
-              <button
-                className="flex items-center text-center gap-2 w-64 px-[24px] py-[12px] bg-black text-white rounded-[6px] mb-3"
-              >
+              <button className="flex items-center text-center gap-2 w-64 px-[24px] py-[12px] bg-black text-white rounded-[6px] mb-3">
                 <FaApple />
                 Continue with Apple
               </button>

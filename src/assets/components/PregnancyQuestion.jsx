@@ -15,14 +15,14 @@ export default function PregnancyQuestion() {
   if (gender !== "female") {
     return <Navigate to="" replace />; // Redirect if not female
   }
-// Redirect or skip this question if gender is not "female"
-if (gender !== "female") {
+  // Redirect or skip this question if gender is not "female"
+  if (gender !== "female") {
     navigate(""); // Redirect to the next component
     return null;
   }
 
   const handleNextClick = () => {
-    navigate("/project-glow/hormonal"); 
+    navigate("/project-glow/hormonal");
   };
 
   return (
@@ -93,7 +93,10 @@ if (gender !== "female") {
 
         {/* Footer Buttons */}
         <div className="mt-auto mb-6 flex justify-between px-6">
-          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+          <button
+            className="text-[16px] text-gray-500 underline"
+            onClick={handleNextClick}
+          >
             Skip
           </button>
           <button

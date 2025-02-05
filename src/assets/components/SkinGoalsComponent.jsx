@@ -22,12 +22,12 @@ export default function SkinGoalsComponent() {
       setSelectedGoals([...selectedGoals, goalTitle]);
     }
   };
-    
-    const navigate = useNavigate();
 
-    const handleNextClick = () => {
-        navigate("/project-glow/allergyqs");
-      };
+  const navigate = useNavigate();
+
+  const handleNextClick = () => {
+    navigate("/project-glow/allergyqs");
+  };
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
@@ -123,11 +123,7 @@ export default function SkinGoalsComponent() {
                 }`}
                 onClick={() => handleGoalSelection(goal.title)}
               >
-                <img
-                  src={goal.logo}
-                  alt="logo"
-                  className="w-[62px] h-[62px]"
-                />
+                <img src={goal.logo} alt="logo" className="w-[62px] h-[62px]" />
                 <div className="flex flex-col gap-[4px]">
                   <h2 className="text-[14px] leading-[20px] w-[228px] h-[20px] text-[#303030] font-medium">
                     {goal.title}
@@ -142,9 +138,12 @@ export default function SkinGoalsComponent() {
         </div>
 
         <div className="mt-[100px] mb-6 flex justify-between h-[98px] w-[390px] py-[20px] px-[30px]">
-          <button className="text-[16px] text-gray-500 underline" 
-          onClick={handleNextClick}>
-          Skip</button>
+          <button
+            className="text-[16px] text-gray-500 underline"
+            onClick={handleNextClick}
+          >
+            Skip
+          </button>
           <button
             className={`w-[188px] py-[12px] px-[50px] h-[48px] rounded-[6px] shadow-lg flex items-center justify-center gap-1 text-[16px] ${
               selectedGoals.length > 0
@@ -154,7 +153,8 @@ export default function SkinGoalsComponent() {
             onClick={handleNextClick}
             disabled={selectedGoals.length === 0}
           >
-            Earn 1 x <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px]" />
+            Earn 1 x{" "}
+            <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px]" />
           </button>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import React from "react";
 import bgImg from "./pgimg/Img-04.png";
 
-
-
 const BenefitsPage = () => {
   return (
     <div

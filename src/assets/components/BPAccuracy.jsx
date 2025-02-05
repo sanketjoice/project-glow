@@ -19,8 +19,14 @@ function BPTransformativeResultsSection() {
           <div className="bg-opacity-80 p-6 rounded-lg">
             <h3 className="text-[40px] sm:text-[48px] lg:text-[56px] text-gray-800 mb-5 flex items-center justify-center gap-1">
               62
-              <span className="text-[20px] sm:text-[24px] lg:text-[30px] mt-2 lg:mt-4">%</span>
-              <img src={upArrow} className="h-[30px] sm:h-[36px] lg:h-[41px]" alt="Up Arrow" />
+              <span className="text-[20px] sm:text-[24px] lg:text-[30px] mt-2 lg:mt-4">
+                %
+              </span>
+              <img
+                src={upArrow}
+                className="h-[30px] sm:h-[36px] lg:h-[41px]"
+                alt="Up Arrow"
+              />
             </h3>
             <p className="text-[16px] sm:text-[18px] font-semibold text-gray-700 mb-2">
               Enhanced Conversion Rates
@@ -35,8 +41,14 @@ function BPTransformativeResultsSection() {
           <div className="bg-opacity-80 p-6 rounded-lg">
             <h3 className="text-[40px] sm:text-[48px] lg:text-[56px] text-gray-800 mb-5 flex items-center justify-center gap-1">
               34
-              <span className="text-[20px] sm:text-[24px] lg:text-[30px] mt-2 lg:mt-4">%</span>
-              <img src={upArrow} className="h-[30px] sm:h-[36px] lg:h-[41px]" alt="Up Arrow" />
+              <span className="text-[20px] sm:text-[24px] lg:text-[30px] mt-2 lg:mt-4">
+                %
+              </span>
+              <img
+                src={upArrow}
+                className="h-[30px] sm:h-[36px] lg:h-[41px]"
+                alt="Up Arrow"
+              />
             </h3>
             <p className="text-[16px] sm:text-[18px] font-semibold text-gray-700 mb-2">
               Boost in Transaction Value
@@ -51,7 +63,9 @@ function BPTransformativeResultsSection() {
           <div className="bg-opacity-80 p-6 rounded-lg">
             <h3 className="text-[40px] sm:text-[48px] lg:text-[56px] text-gray-800 mb-5 flex items-center justify-center gap-1">
               98
-              <span className="text-[20px] sm:text-[24px] lg:text-[30px] mt-2 lg:mt-3">%</span>
+              <span className="text-[20px] sm:text-[24px] lg:text-[30px] mt-2 lg:mt-3">
+                %
+              </span>
               <img
                 src={accuracy}
                 className="h-[30px] sm:h-[36px] lg:h-[41px] mt-2 lg:mt-3"

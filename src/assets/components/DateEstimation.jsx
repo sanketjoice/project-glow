@@ -44,7 +44,8 @@ export default function DateEstimation() {
               key={index}
               className={`w-[24px] h-[24px] text-white rounded-full flex items-center justify-center border ${
                 step <= 3 ? "bg-black" : "bg-gray-300"
-              }`}>
+              }`}
+            >
               {step}
             </div>
           ))}
@@ -53,34 +54,38 @@ export default function DateEstimation() {
         {/* Question Section */}
         <div className="flex flex-col items-center px-6 text-center mt-4">
           <div className="flex items-center gap-2">
-                      <div className="bg-[#F0F7EF] mt-2 rounded-full p-4">
-                        <img
-                          src={calendar}
-                          alt="calendar"
-                          className="w-[70px] h-[70px]"
-                        />
-                      </div>
-                      <h1 className="mt-4 w-[240px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
-                      When is the estimated start date of your next period?
-                      </h1>
-                    </div>
+            <div className="bg-[#F0F7EF] mt-2 rounded-full p-4">
+              <img
+                src={calendar}
+                alt="calendar"
+                className="w-[70px] h-[70px]"
+              />
+            </div>
+            <h1 className="mt-4 w-[240px] text-[24px] leading-[30px] text-start font-semibold text-[#303030]">
+              When is the estimated start date of your next period?
+            </h1>
+          </div>
           {/* Date Picker */}
           <div className="relative w-[330px] h-[48px] mt-6 gap-[10px] border border-gray-300 bg-white">
-          <div className="absolute inset-y-0  bg-white left-3 h-[48px] w-[100px] ml-3 flex items-center pointer-events-none">
-            <img src={calendaricon} alt="Calendar Icon" className="w-[15px] h-[15px] bg-white" />
-          </div>
-          
-          <DatePicker
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            dateFormat="dd MMM yyyy" // Format as "22 Dec 2024"
-            placeholderText="Pick a date"
-            className="w-full h-[48px]  rounded-[6px] 
+            <div className="absolute inset-y-0  bg-white left-3 h-[48px] w-[100px] ml-3 flex items-center pointer-events-none">
+              <img
+                src={calendaricon}
+                alt="Calendar Icon"
+                className="w-[15px] h-[15px] bg-white"
+              />
+            </div>
+
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date) => setSelectedDate(date)}
+              dateFormat="dd MMM yyyy" // Format as "22 Dec 2024"
+              placeholderText="Pick a date"
+              className="w-full h-[48px]  rounded-[6px] 
                         pr-[16px] py-[12px] text-gray-700 focus:outline-none 
                         bg-white placeholder-gray-400"
-            popperPlacement="bottom-start"
-          />
-        </div>
+              popperPlacement="bottom-start"
+            />
+          </div>
 
           {/* Why We Ask Section */}
           <div className="bg-[#F0F7EF] mt-[100px] p-4 border border-[#9CA3AF] rounded-[10px] w-[330px] text-left">
@@ -106,8 +111,12 @@ export default function DateEstimation() {
 
           {/* Footer Buttons */}
           <div className="mt-10 flex justify-between w-full px-6">
-            <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}
-            >Skip</button>
+            <button
+              className="text-[16px] text-gray-500 underline"
+              onClick={handleNextClick}
+            >
+              Skip
+            </button>
             <button
               className={`w-[188px] h-[48px] rounded-[6px] shadow-lg flex items-center justify-center gap-1 text-[16px] ${
                 selectedDate
@@ -115,8 +124,10 @@ export default function DateEstimation() {
                   : "bg-gray-300 text-gray-500 cursor-not-allowed"
               }`}
               onClick={handleNextClick}
-              disabled={!selectedDate}>
-              Earn 1 x <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px]" />
+              disabled={!selectedDate}
+            >
+              Earn 1 x{" "}
+              <img src={gem} alt="Gem Icon" className="w-[20px] h-[20px]" />
             </button>
           </div>
         </div>

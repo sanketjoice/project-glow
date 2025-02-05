@@ -1,8 +1,8 @@
 import React from "react";
-import mainImage from "./Project Glow - Design Assets/Images/Img-02.png"; 
-import iconOne from "./Project Glow - Design Assets/SVG Selected/happy.svg"; 
-import iconTwo from "./Project Glow - Design Assets/SVG Selected/diagnostics.svg"; 
-import iconThree from "./Project Glow - Design Assets/SVG Selected/Personalise.svg"; 
+import mainImage from "./Project Glow - Design Assets/Images/Img-02.png";
+import iconOne from "./Project Glow - Design Assets/SVG Selected/happy.svg";
+import iconTwo from "./Project Glow - Design Assets/SVG Selected/diagnostics.svg";
+import iconThree from "./Project Glow - Design Assets/SVG Selected/Personalise.svg";
 
 function FeaturesSection() {
   const features = [
@@ -30,7 +30,9 @@ function FeaturesSection() {
     <section className="bg-white px-6 py-12 md:px-16  grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-[1440px] m-auto">
       {/* Left Section: Text and Features */}
       <div className="lg:ml-36">
-        <h2 className="text-2xl md:text-4xl font-bold lg:w-[475px] mb-4">How It Works</h2>
+        <h2 className="text-2xl md:text-4xl font-bold lg:w-[475px] mb-4">
+          How It Works
+        </h2>
         <p className="text-gray-600 mb-8 text-lg md:text-xl ">
           Dive into a tailored and holistic approach that decodes your skin’s
           unique needs, ensuring you provide it with exactly what it requires
@@ -46,7 +48,9 @@ function FeaturesSection() {
               />
               <div>
                 <h4 className="text-lg font-semibold">{feature.title}</h4>
-                <p className="text-gray-600 lg:w-[400px] lg:h-[]">{feature.description}</p>
+                <p className="text-gray-600 lg:w-[400px] lg:h-[]">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}
@@ -56,7 +60,7 @@ function FeaturesSection() {
       {/* Right Section: Image */}
       <div className="relative">
         <img
-          src={mainImage} 
+          src={mainImage}
           alt="Face Analysis"
           className="rounded-lg w-[390px] lg:h-[729px] lg:w-[652px]"
         />

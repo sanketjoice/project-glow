@@ -11,14 +11,14 @@ import BPFooter from "./assets/components/BPFooter";
 function BusinessPage() {
   return (
     <>
-    <BPNavbar />
-    <BPHeroSection />
-    <BPSkinAnalysis />
-    <BPFeaturesSection />
-    <BPTransformativeResultsSection />
-    <RecommendationSection />
-    <BPPricingSection />
-    <BPFooter />
+      <BPNavbar />
+      <BPHeroSection />
+      <BPSkinAnalysis />
+      <BPFeaturesSection />
+      <BPTransformativeResultsSection />
+      <RecommendationSection />
+      <BPPricingSection />
+      <BPFooter />
     </>
   );
 }

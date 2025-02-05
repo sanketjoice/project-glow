@@ -35,52 +35,115 @@ import Checkin from "./assets/components/Checkin";
 import SkinAnalysisHome from "./assets/components/SkinAnalysisHome";
 import DailyTracker from "./assets/components/DailyTracker";
 import UserProfileHome from "./assets/components/UserProfileHome";
-
+import MyAccount from "./assets/components/MyAccount";
+import ComprehensiveLevel from "./assets/components/ComprehensiveLevel";
+import { SubscriptIcon } from "lucide-react";
+import Subscription from "./assets/components/Subscription";
 
 function App() {
   return (
-      <GenderProvider>  
-    <Router>
-      <div className="bg-white">
-        <Routes>
-          <Route path="/project-glow" element={<LandingPage />} />
-          <Route path="/project-glow/business" element={<BusinessPage />} />
-          <Route path="/project-glow/skin-analysis" element={<SkinAnalysisPage />} />
-          <Route path="/project-glow/QuestionnaireComponent" element={<QuestionnaireComponent />} />
-          <Route path="/project-glow/skin-type" element={<SkinTypeComponent />} />
-          <Route path="/project-glow/skin-goals" element={<SkinGoalsComponent />} />
-          <Route path="/project-glow/allergyqs" element={<AllergyQuestionComponent />} />
-          <Route path="/project-glow/allergies" element={<AllergiesComponent />} />
-          <Route path="/project-glow/skinconditions" element={<SkinConditionsComponent />} />
-          <Route path="/project-glow/ingredients" element={<IngredientPreferences />} />
-          <Route path="/project-glow/medqs" element={<MedQuestions />} />
-          <Route path="/project-glow/pregnancy-question" element={<PregnancyQuestion />} />
-          <Route path="/project-glow/hormonal" element={<HormonalChanges />}/>
-          <Route path="/project-glow/allset" element={<AllSet />}/>
-          <Route path="/project-glow/estimation" element={<DateEstimation />}/>
-          <Route path="/project-glow/login" element={<Login />}/>
-          <Route path="/project-glow/signup" element={<Signup />}/>
-          <Route path="/project-glow/signin" element={<Signin />}/>
-          <Route path="/project-glow/congo" element={<Congratulations />}/>
-          <Route path="/project-glow/aianalysis" element={<AIAnalysis />}/>
-          <Route path="/project-glow/badge" element={<FirstBadge />}/>
-          <Route path="/project-glow/overall" element ={<OverallScore />}/>
-          <Route path="/project-glow/confetti" element={<PerceivedSkinAge />}/>
-          <Route path="/project-glow/analysisresult" element={<FacialSkinAnalysisResult />}/>
-          <Route path="/project-glow/info" element={<AnalysisInfo />}/>
-          <Route path="/project-glow/wrinkles" element={<WrinklesSection />}/>
-          <Route path="/project-glow/retinoids" element={<Retinoids />}/>
-          <Route path="/project-glow/vitaminc" element={<VitaminC />}/>
-          <Route path="/project-glow/text" element={<SkinCareInsights />}/>
-          <Route path="/project-glow/home" element={<Home />}/>
-          <Route path="/project-glow/checkin" element={<Checkin />}/>
-          <Route path="project-glow/skinanlysishome" element={<SkinAnalysisHome />}/>
-          <Route path="/project-glow/dailytracker" element={<DailyTracker />}/>
-          <Route path="/project-glow/userprofile" element={<UserProfileHome />}/>
-        </Routes>
-      </div>
-    </Router>
-        </GenderProvider>
+    <GenderProvider>
+      <Router>
+        <div className="bg-white">
+          <Routes>
+            <Route path="/project-glow" element={<LandingPage />} />
+            <Route path="/project-glow/business" element={<BusinessPage />} />
+            <Route
+              path="/project-glow/skin-analysis"
+              element={<SkinAnalysisPage />}
+            />
+            <Route
+              path="/project-glow/QuestionnaireComponent"
+              element={<QuestionnaireComponent />}
+            />
+            <Route
+              path="/project-glow/skin-type"
+              element={<SkinTypeComponent />}
+            />
+            <Route
+              path="/project-glow/skin-goals"
+              element={<SkinGoalsComponent />}
+            />
+            <Route
+              path="/project-glow/allergyqs"
+              element={<AllergyQuestionComponent />}
+            />
+            <Route
+              path="/project-glow/allergies"
+              element={<AllergiesComponent />}
+            />
+            <Route
+              path="/project-glow/skinconditions"
+              element={<SkinConditionsComponent />}
+            />
+            <Route
+              path="/project-glow/ingredients"
+              element={<IngredientPreferences />}
+            />
+            <Route path="/project-glow/medqs" element={<MedQuestions />} />
+            <Route
+              path="/project-glow/pregnancy-question"
+              element={<PregnancyQuestion />}
+            />
+            <Route
+              path="/project-glow/hormonal"
+              element={<HormonalChanges />}
+            />
+            <Route path="/project-glow/allset" element={<AllSet />} />
+            <Route
+              path="/project-glow/estimation"
+              element={<DateEstimation />}
+            />
+            <Route path="/project-glow/login" element={<Login />} />
+            <Route path="/project-glow/signup" element={<Signup />} />
+            <Route path="/project-glow/signin" element={<Signin />} />
+            <Route path="/project-glow/congo" element={<Congratulations />} />
+            <Route path="/project-glow/aianalysis" element={<AIAnalysis />} />
+            <Route path="/project-glow/badge" element={<FirstBadge />} />
+            <Route path="/project-glow/overall" element={<OverallScore />} />
+            <Route
+              path="/project-glow/confetti"
+              element={<PerceivedSkinAge />}
+            />
+            <Route
+              path="/project-glow/analysisresult"
+              element={<FacialSkinAnalysisResult />}
+            />
+            <Route path="/project-glow/info" element={<AnalysisInfo />} />
+            <Route
+              path="/project-glow/wrinkles"
+              element={<WrinklesSection />}
+            />
+            <Route path="/project-glow/retinoids" element={<Retinoids />} />
+            <Route path="/project-glow/vitaminc" element={<VitaminC />} />
+            <Route path="/project-glow/text" element={<SkinCareInsights />} />
+            <Route path="/project-glow/home" element={<Home />} />
+            <Route path="/project-glow/checkin" element={<Checkin />} />
+            <Route
+              path="project-glow/skinanlysishome"
+              element={<SkinAnalysisHome />}
+            />
+            <Route
+              path="/project-glow/dailytracker"
+              element={<DailyTracker />}
+            />
+            <Route
+              path="/project-glow/userprofile"
+              element={<UserProfileHome />}
+            />
+            <Route path="/project-glow/myaccount" element={<MyAccount />} />
+            <Route
+              path="/project-glow/comprehensivelevel"
+              element={<ComprehensiveLevel />}
+            />
+            <Route
+              path="/project-glow/subscription"
+              element={<Subscription />}
+            />
+          </Routes>
+        </div>
+      </Router>
+    </GenderProvider>
   );
 }
 

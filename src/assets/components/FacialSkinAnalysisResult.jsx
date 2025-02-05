@@ -17,8 +17,6 @@ import chevron from "./Project Glow - Design Assets/Icons/chevron-left.png";
 import gem from "./Project Glow - Design Assets/Icons/jade.png";
 import request from "./Project Glow - Design Assets/SVG Selected/request.svg";
 
-
-
 export default function FacialSkinAnalysisResult() {
   const navigate = useNavigate("/project-glow/info");
   const handleInfoClick = () => {
@@ -26,7 +24,6 @@ export default function FacialSkinAnalysisResult() {
   };
   const handleWrinkleIcon = () => {
     navigate("/project-glow/wrinkles");
-
   };
   const handleLeftClick = () => {
     navigate("/project-glow/home");
@@ -34,8 +31,18 @@ export default function FacialSkinAnalysisResult() {
 
   const formatDate = (date) => {
     const months = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
     const day = String(date.getDate()).padStart(2, "0");
     const month = months[date.getMonth()];
@@ -65,9 +72,13 @@ export default function FacialSkinAnalysisResult() {
         </div>
 
         {/* Title */}
-        <h1 className="text-[18px] font-semibold mb-4">Facial Skin Analysis Result</h1>
+        <h1 className="text-[18px] font-semibold mb-4">
+          Facial Skin Analysis Result
+        </h1>
 
-        <p className="text-[14px] font-semibold text-[#303030] mb-2">Overall Skin Score</p>
+        <p className="text-[14px] font-semibold text-[#303030] mb-2">
+          Overall Skin Score
+        </p>
         <div className="flex gap-6">
           <div className="flex flex-col items-center w-1/2">
             <div className="relative">
@@ -97,18 +108,28 @@ export default function FacialSkinAnalysisResult() {
               </div>
             </div>
             <div className="flex justify-center self-center items-center ml-9">
-              <p className="text-[14px] ml-[-60px] mt-5 text-[#303030]">How to calculate?</p>
-              <img src={info} alt="infoLogo" className="w-[24px] h-[24px] ml-2 mt-5" />
+              <p className="text-[14px] ml-[-60px] mt-5 text-[#303030]">
+                How to calculate?
+              </p>
+              <img
+                src={info}
+                alt="infoLogo"
+                className="w-[24px] h-[24px] ml-2 mt-5"
+              />
             </div>
             {/* Additional Info */}
             <div className="mt-6 ml-[-70px]">
               <div className="mb-4">
                 <p className="text-sm text-[#303030]">Skin Type</p>
-                <p className="text-[16px] font-semibold text-[#303030]">Combination</p>
+                <p className="text-[16px] font-semibold text-[#303030]">
+                  Combination
+                </p>
               </div>
               <div>
                 <p className="text-sm text-[#303030]">Sensitivity</p>
-                <p className="font-medium text-[16px] text-[#303030]">Sensitive</p>
+                <p className="font-medium text-[16px] text-[#303030]">
+                  Sensitive
+                </p>
               </div>
             </div>
           </div>
@@ -116,12 +137,17 @@ export default function FacialSkinAnalysisResult() {
           <div className="border border-[#879596] w-0 h-[333px] mt-[-25px]"></div>
           {/* Skin Age */}
           <div className="w-1/2">
-            <p className="text-[14px] text-[#303030] mt-[-30px] font-semibold">Skin Age</p>
+            <p className="text-[14px] text-[#303030] mt-[-30px] font-semibold">
+              Skin Age
+            </p>
             <div className="flex items-center mt-1">
               <span className="text-[30px] font-bold mr-2">25</span>
               <div className="flex flex-col gap-2">
                 <div className="w-[63px] bg-gray-200 h-2 rounded-full overflow-hidden mr-2">
-                  <div className="bg-[#22AD5C] h-2" style={{ width: "100%" }}></div>
+                  <div
+                    className="bg-[#22AD5C] h-2"
+                    style={{ width: "100%" }}
+                  ></div>
                 </div>
                 <div className="w-[93px] bg-[#BDBDBD] h-2 rounded-full overflow-hidden mr-2">
                   <div className="h-2" style={{ width: "0%" }}></div>
@@ -159,7 +185,13 @@ export default function FacialSkinAnalysisResult() {
                       }}
                     >
                       <defs>
-                        <linearGradient id="bellCurveGradient" x1="0" x2="0" y1="0" y2="1">
+                        <linearGradient
+                          id="bellCurveGradient"
+                          x1="0"
+                          x2="0"
+                          y1="0"
+                          y2="1"
+                        >
                           <stop offset="0%" stopColor="#FFEA81" />
                           <stop offset="100%" stopColor="#F4F7F2" />
                         </linearGradient>
@@ -206,94 +238,162 @@ export default function FacialSkinAnalysisResult() {
                 </div>
               </div>
             </div>
-            <p className="text-[#303030] h-[60px] w-[148px] mb-[40px] text-[14px] mt-12">You're doing better than 72% of users in your age group</p>
-            <p className="text-[14px] text-[#303030] w-[140px] h-[22px]">Comprehensive level</p>
+            <p className="text-[#303030] h-[60px] w-[148px] mb-[40px] text-[14px] mt-12">
+              You're doing better than 72% of users in your age group
+            </p>
+            <p className="text-[14px] text-[#303030] w-[140px] h-[22px]">
+              Comprehensive level
+            </p>
             <div className="flex items-center">
               <div className="w-[100px] bg-gray-200 h-2 rounded-full overflow-hidden mr-2">
-                <div className="bg-[#8646F4] h-2" style={{ width: "60%" }}></div>
+                <div
+                  className="bg-[#8646F4] h-2"
+                  style={{ width: "60%" }}
+                ></div>
               </div>
-              <span className="text-[16px] text-[#303030] font-semibold">60%</span>
+              <span className="text-[16px] text-[#303030] font-semibold">
+                60%
+              </span>
             </div>
           </div>
         </div>
 
         <div className="mt-6" onClick={handleInfoClick}>
-          <p className="text-[#303030] text-sm text-center hover:cursor-pointer underline">How do we analyze your skin?</p>
+          <p className="text-[#303030] text-sm text-center hover:cursor-pointer underline">
+            How do we analyze your skin?
+          </p>
         </div>
         <div className="border border-[#9E9E9E] w-[350px] mt-8 h-0"></div>
         <div className="w-[350px] h-[156px] mt-4">
-            <p className="text-black text-[18px] mb-3 leading-[26px] font-semibold">Summary</p>
-            <p className="text-[14px] leading-[22px] w-[350px] h-[88px]">The skin exhibits a mix of issues, such as mild acne, hyperpigmentation, and fine lines. 
-            It appears to be a combination skin type, with some areas showing oiliness while others seem normal to dry.</p>
+          <p className="text-black text-[18px] mb-3 leading-[26px] font-semibold">
+            Summary
+          </p>
+          <p className="text-[14px] leading-[22px] w-[350px] h-[88px]">
+            The skin exhibits a mix of issues, such as mild acne,
+            hyperpigmentation, and fine lines. It appears to be a combination
+            skin type, with some areas showing oiliness while others seem normal
+            to dry.
+          </p>
         </div>
         {/* 10 Issues Identified Section */}
         <div>
-          <h2 className="text-[18px] font-semibold mb-4">10 Issues Identified</h2>
+          <h2 className="text-[18px] font-semibold mb-4">
+            10 Issues Identified
+          </h2>
           <div className="flex items-center align-middle gap-3">
             <div className="bg-[#22AD5C] h-[8px] w-[20px] rounded-[10px]"></div>
             <p className="text-[12px] text-[#303030]">Minimal issue</p>
           </div>
           <div className="flex items-center align-middle gap-3">
             <div className="bg-[#FBBF24] h-[8px] w-[20px] rounded-[10px]"></div>
-            <p className="text-[12px] text-[#303030]">Mild issue, requires attention</p>
+            <p className="text-[12px] text-[#303030]">
+              Mild issue, requires attention
+            </p>
           </div>
           <div className="flex items-center align-middle gap-3 mb-7">
             <div className="bg-[#F56060] h-[8px] w-[20px] rounded-[10px]"></div>
-            <p className="text-[12px] text-[#303030]">Severe issue, needs immediate care</p>
+            <p className="text-[12px] text-[#303030]">
+              Severe issue, needs immediate care
+            </p>
           </div>
           <div className="grid grid-cols-3 gap-4 mt-4">
-  {[
-    { name: "Wrinkles", color: "green", image: wrinkless },
-    { name: "Dark spot", color: "green", image: darkSpots },
-    { name: "Redness", color: "yellow", image: redness },
-    { name: "Acne", color: "yellow", image: acne },
-    { name: "Texture", color: "green", image: wrinkles },
-    { name: "Hydration", color: "red", image: hydration },
-    { name: "Pore Size", color: "green", image: pore },
-    { name: "Dark Circles", color: "yellow", image: darkcircles },
-    { name: "Sun Damage", color: "yellow", image: uv },
-    { name: "Firmness", color: "red", image: firmness }
-  ].map((issue, index) => (
-    <div key={index} className="flex hover:cursor-pointer flex-col items-center" onClick={handleWrinkleIcon}>
-      <div className="relative">
-        <svg width="80" height="80">
-          <circle cx="40" cy="40" r="35" stroke="#E5E5E5" strokeWidth="6" fill="none" />
-          <circle
-            cx="40"
-            cy="40"
-            r="35"
-            stroke={issue.color === "green" ? "#22AD5C" : issue.color === "yellow" ? "#FBC02D" : "#E53935"}
-            strokeWidth="6"
-            fill="none"
-            strokeDasharray="220"
-            strokeDashoffset="50"
-            strokeLinecap="round"
-          />
-        </svg>
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-          <img src={issue.image} alt={issue.name} className="w-10 h-7" />
-        </div>
-      </div>
-      <p className=" flex items-center text-sm mt-1">{issue.name} <spann><img src={chevron} alt="rightArrow" className=" rotate-180 w-[16px] mt-[2px]" /></spann></p>
-    </div>
-  ))}
-
-          </div>
-            <div className="border border-[#9E9E9E] w-[350px] mt-8 h-0"></div>
-            <p className="flex text-center justify-center text-[16px] leading-[24px] text-[#303030] font-semibold mt-5">Earn <img src={gem} alt="jade" className="w-[24px]" /> x10 by share result with friends</p>
-            <div className="flex justify-center"> 
-            <button className="text-[16px] leading-6 flex text-[#303030] w-[249px] h-[48px] border border-[#303030] py-[12px]
-            px-[17px] gap-[8px] rounded-[50px] mt-3"><img src={closeIcon} alt="" />Share result with friends</button>
-            </div>
-            <div className="w-[350px] h-[162px] py-[24px] px-[33px] gap-[18px] bg-[#C2F3D6] rounded-[10px] my-9">
-              <div className="w-[310px] h-[52px]">
-                <div className="flex gap-3 items-center">
-                <img src={request} alt="requestlogo" className="w-[40px] h-[40px]" />
-                <p className="text-[18px] leading-[26px] w-[258px]  text-[#303030] font-semibold">Did you know your skincare products are good for you?</p>
+            {[
+              { name: "Wrinkles", color: "green", image: wrinkless },
+              { name: "Dark spot", color: "green", image: darkSpots },
+              { name: "Redness", color: "yellow", image: redness },
+              { name: "Acne", color: "yellow", image: acne },
+              { name: "Texture", color: "green", image: wrinkles },
+              { name: "Hydration", color: "red", image: hydration },
+              { name: "Pore Size", color: "green", image: pore },
+              { name: "Dark Circles", color: "yellow", image: darkcircles },
+              { name: "Sun Damage", color: "yellow", image: uv },
+              { name: "Firmness", color: "red", image: firmness },
+            ].map((issue, index) => (
+              <div
+                key={index}
+                className="flex hover:cursor-pointer flex-col items-center"
+                onClick={handleWrinkleIcon}
+              >
+                <div className="relative">
+                  <svg width="80" height="80">
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="35"
+                      stroke="#E5E5E5"
+                      strokeWidth="6"
+                      fill="none"
+                    />
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="35"
+                      stroke={
+                        issue.color === "green"
+                          ? "#22AD5C"
+                          : issue.color === "yellow"
+                          ? "#FBC02D"
+                          : "#E53935"
+                      }
+                      strokeWidth="6"
+                      fill="none"
+                      strokeDasharray="220"
+                      strokeDashoffset="50"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+                    <img
+                      src={issue.image}
+                      alt={issue.name}
+                      className="w-10 h-7"
+                    />
+                  </div>
                 </div>
-                <button className="text-[16px] rounded-md mt-5 leading-6 bg-[#303030] w-[274px] h-[44px] text-white">Check with Product Scanner</button>
+                <p className=" flex items-center text-sm mt-1">
+                  {issue.name}{" "}
+                  <spann>
+                    <img
+                      src={chevron}
+                      alt="rightArrow"
+                      className=" rotate-180 w-[16px] mt-[2px]"
+                    />
+                  </spann>
+                </p>
               </div>
+            ))}
+          </div>
+          <div className="border border-[#9E9E9E] w-[350px] mt-8 h-0"></div>
+          <p className="flex text-center justify-center text-[16px] leading-[24px] text-[#303030] font-semibold mt-5">
+            Earn <img src={gem} alt="jade" className="w-[24px]" /> x10 by share
+            result with friends
+          </p>
+          <div className="flex justify-center">
+            <button
+              className="text-[16px] leading-6 flex text-[#303030] w-[249px] h-[48px] border border-[#303030] py-[12px]
+            px-[17px] gap-[8px] rounded-[50px] mt-3"
+            >
+              <img src={closeIcon} alt="" />
+              Share result with friends
+            </button>
+          </div>
+          <div className="w-[350px] h-[162px] py-[24px] px-[33px] gap-[18px] bg-[#C2F3D6] rounded-[10px] my-9">
+            <div className="w-[310px] h-[52px]">
+              <div className="flex gap-3 items-center">
+                <img
+                  src={request}
+                  alt="requestlogo"
+                  className="w-[40px] h-[40px]"
+                />
+                <p className="text-[18px] leading-[26px] w-[258px]  text-[#303030] font-semibold">
+                  Did you know your skincare products are good for you?
+                </p>
+              </div>
+              <button className="text-[16px] rounded-md mt-5 leading-6 bg-[#303030] w-[274px] h-[44px] text-white">
+                Check with Product Scanner
+              </button>
             </div>
+          </div>
         </div>
       </div>
     </div>

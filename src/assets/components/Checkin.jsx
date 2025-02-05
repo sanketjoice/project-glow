@@ -1,30 +1,29 @@
-import React from 'react';
+import React from "react";
 import closeIcon from "./Project Glow - Design Assets/Icons/close.png";
 import { useNavigate } from "react-router-dom";
 import calendarIcon from "./Project Glow - Design Assets/SVG Selected/Daily tracker.svg";
-
 
 const Checkin = () => {
   const navigate = useNavigate();
 
   const handleNextClick = () => {
-    navigate("/project-glow/home"); 
+    navigate("/project-glow/home");
   };
   return (
     <div className="w-[390px] mx-auto h-[800px] bg-orange-50 mt-3 pt-1">
-
       {/* Close button container */}
-            <img
-                        src={closeIcon}
-                        className="text-gray-700 w-[24px] h-[24px] cursor-pointer flex place-self-end mr-7 mt-5"
-                        alt="Close Icon"
-                        onClick={handleNextClick}/>
+      <img
+        src={closeIcon}
+        className="text-gray-700 w-[24px] h-[24px] cursor-pointer flex place-self-end mr-7 mt-5"
+        alt="Close Icon"
+        onClick={handleNextClick}
+      />
 
       {/* Calendar Icon */}
       <div className="flex justify-center mb-4">
-        <img 
-          src={calendarIcon} 
-          alt="Calendar" 
+        <img
+          src={calendarIcon}
+          alt="Calendar"
           className="w-[100px] h-[100px]"
         />
       </div>
@@ -64,8 +63,7 @@ const Checkin = () => {
         </button>
       </div>
     </div>
-
   );
 };
 
-export default Checkin; 
+export default Checkin;

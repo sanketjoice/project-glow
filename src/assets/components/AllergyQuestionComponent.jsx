@@ -86,7 +86,10 @@ export default function AllergyQuestionComponent() {
 
         {/* Footer Buttons */}
         <div className="mt-[200px] mb-6 flex justify-between h-[98px] w-[390px] py-[20px] px-[30px]">
-          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+          <button
+            className="text-[16px] text-gray-500 underline"
+            onClick={handleNextClick}
+          >
             Skip
           </button>
           <button

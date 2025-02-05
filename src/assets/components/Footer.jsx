@@ -17,7 +17,9 @@ export default function Footer() {
               Project Glow Skin for Business
             </li>
             <li className="hover:text-gray-800 cursor-pointer">Affiliates</li>
-            <li className="hover:text-gray-800 cursor-pointer">Terms & Policies</li>
+            <li className="hover:text-gray-800 cursor-pointer">
+              Terms & Policies
+            </li>
             <li className="hover:text-gray-800 cursor-pointer">Contact Us</li>
           </ul>
         </div>

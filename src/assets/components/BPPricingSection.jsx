@@ -12,8 +12,8 @@ function BPPricingSection() {
         </h2>
         <p className="text-gray-600 text-base lg:text-[16px] leading-6 max-w-[795px] mx-auto mb-8 lg:mb-12">
           Join us in transforming skincare as we know it. Be part of a community
-          that values innovation, science, and sustainability. Our pricing
-          model is designed to accommodate the needs of all businesses.
+          that values innovation, science, and sustainability. Our pricing model
+          is designed to accommodate the needs of all businesses.
         </p>
 
         {/* Business Options Section */}

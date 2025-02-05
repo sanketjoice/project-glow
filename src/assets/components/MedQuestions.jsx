@@ -18,7 +18,7 @@ export default function MedQuestions() {
     if (gender === "female") {
       navigate("/project-glow/pregnancy-question");
     } else {
-      navigate("/project-glow/allset"); 
+      navigate("/project-glow/allset");
     }
   };
 
@@ -107,7 +107,10 @@ export default function MedQuestions() {
 
         {/* Footer Buttons */}
         <div className="mt-auto mb-6 flex justify-between px-6">
-          <button className="text-[16px] text-gray-500 underline" onClick={handleNextClick}>
+          <button
+            className="text-[16px] text-gray-500 underline"
+            onClick={handleNextClick}
+          >
             Skip
           </button>
           <button

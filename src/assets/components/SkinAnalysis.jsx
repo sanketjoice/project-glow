@@ -83,7 +83,6 @@ export default function SkinAnalysis() {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

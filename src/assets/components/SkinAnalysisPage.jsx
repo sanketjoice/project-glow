@@ -71,19 +71,24 @@ function SkinAnalysisPage() {
                 Select skin area for analysis
               </h1>
               <p className="text-gray-600 text-center mb-8 w-[310px] h-[66px] text-[14px] leading-[22px]">
-                We analyze your skin to recommend ingredients tailored to your unique needs, no more one-size-fits-all routines.
+                We analyze your skin to recommend ingredients tailored to your
+                unique needs, no more one-size-fits-all routines.
               </p>
               <div className="flex gap-6 justify-center">
                 {/* Facial Skin */}
                 <div
                   onClick={() => handleSelect("Facial Skin")}
                   className={`cursor-pointer border rounded-lg p-4 ${
-                    selectedArea === "Facial Skin" ? "border-black" : "border-gray-400"
-                  }`}>
+                    selectedArea === "Facial Skin"
+                      ? "border-black"
+                      : "border-gray-400"
+                  }`}
+                >
                   <img
                     src={facialSkin}
                     alt="Facial Skin"
-                    className="w-20 h-20 mx-auto" />
+                    className="w-20 h-20 mx-auto"
+                  />
                   <p className="mt-2 text-center w-[83px] h-[24px] text-[16px] leading-[24px] font-semibold">
                     Facial Skin
                   </p>
@@ -93,12 +98,16 @@ function SkinAnalysisPage() {
                 <div
                   onClick={() => handleSelect("Body Skin")}
                   className={`cursor-pointer border rounded-lg p-4 ${
-                    selectedArea === "Body Skin" ? "border-black" : "border-gray-400"
-                  }`}>
+                    selectedArea === "Body Skin"
+                      ? "border-black"
+                      : "border-gray-400"
+                  }`}
+                >
                   <img
                     src={backSkin}
                     alt="Body Skin"
-                    className="w-20 h-20 mx-auto" />
+                    className="w-20 h-20 mx-auto"
+                  />
                   <p className="mt-2 text-center w-[83px] h-[24px] text-[16px] leading-[24px] font-semibold">
                     Body Skin
                   </p>
@@ -109,7 +118,8 @@ function SkinAnalysisPage() {
               {selectedArea && (
                 <button
                   onClick={handleNext}
-                  className="mt-56 h-[50px] w-[145px] px-6 py-2 rounded-[6px] text-white ml-[90px] bg-black hover:bg-gray-800">
+                  className="mt-56 h-[50px] w-[145px] px-6 py-2 rounded-[6px] text-white ml-[90px] bg-black hover:bg-gray-800"
+                >
                   Get Started
                 </button>
               )}
@@ -119,9 +129,12 @@ function SkinAnalysisPage() {
           {/* Step 2: Get Ready */}
           {currentStep === 2 && (
             <>
-              <h1 className="text-[24px] font-semibold w-[330px] h-[30px] mb-4 text-center">Get Ready</h1>
+              <h1 className="text-[24px] font-semibold w-[330px] h-[30px] mb-4 text-center">
+                Get Ready
+              </h1>
               <p className="text-gray-600 text-center mb-8 text-[14px] leading-[22px] w-[330px] h-[44px]">
-                Take a selfie or upload a photo, and let our AI analyze your skin.
+                Take a selfie or upload a photo, and let our AI analyze your
+                skin.
               </p>
               <ul className="text-left mb-6 text-gray-700 space-y-4 w-[299px] h-[316px]">
                 {selectedArea === "Facial Skin" && (
@@ -130,12 +143,21 @@ function SkinAnalysisPage() {
                       <img
                         src={pullHairBack}
                         alt="Pull hair back"
-                        className="w-[70px] h-[70px]" />
-                      <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">Pull your hair back to keep your face clear.</span>
+                        className="w-[70px] h-[70px]"
+                      />
+                      <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">
+                        Pull your hair back to keep your face clear.
+                      </span>
                     </li>
                     <li className="flex items-center gap-4">
-                      <img src={relaxFace} alt="Relax face" className="w-[70px] h-[70px]" />
-                      <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">Relax your face – no need to smile!</span>
+                      <img
+                        src={relaxFace}
+                        alt="Relax face"
+                        className="w-[70px] h-[70px]"
+                      />
+                      <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">
+                        Relax your face – no need to smile!
+                      </span>
                     </li>
                   </>
                 )}
@@ -143,27 +165,41 @@ function SkinAnalysisPage() {
                   <img
                     src={goodLighting}
                     alt="Good lighting"
-                    className="w-[70px] h-[70px]" />
-                  <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">Find good lighting to brighten your photo.</span>
+                    className="w-[70px] h-[70px]"
+                  />
+                  <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">
+                    Find good lighting to brighten your photo.
+                  </span>
                 </li>
                 <li className="flex items-center gap-4">
                   <img
                     src={removeMakeup}
                     alt="Remove makeup"
-                    className="w-[70px] h-[70px]" />
-                  <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">Remove any makeup for an accurate scan.</span>
+                    className="w-[70px] h-[70px]"
+                  />
+                  <span className="w-[209px] h-[44px] text-[14px] leading-[22px]">
+                    Remove any makeup for an accurate scan.
+                  </span>
                 </li>
               </ul>
               <p className="text-[10px] leading-5 w-[330px] h-[80px] text-center my-3">
-                By clicking ‘I’m Ready’, you agree to let us use your photo to analyze your skin. Your data will
-                be processed securely and deleted once results are delivered. See our Privacy Policy for details.
+                By clicking ‘I’m Ready’, you agree to let us use your photo to
+                analyze your skin. Your data will be processed securely and
+                deleted once results are delivered. See our Privacy Policy for
+                details.
               </p>
               <button
                 onClick={handleNext}
-                className="w-[190] h-[50px] bg-black text-white px-[58px] py-[13px] rounded-[6px] hover:bg-gray-800 ml-[70px]">
+                className="w-[190] h-[50px] bg-black text-white px-[58px] py-[13px] rounded-[6px] hover:bg-gray-800 ml-[70px]"
+              >
                 I'm Ready
               </button>
-            <p className="w-[178px] h-[24px] text-[16px] text-center leading-6 hover:cursor-pointer  m-auto mt-7 underline" onClick={handleNext}>Analysis without image</p>
+              <p
+                className="w-[178px] h-[24px] text-[16px] text-center leading-6 hover:cursor-pointer  m-auto mt-7 underline"
+                onClick={handleNext}
+              >
+                Analysis without image
+              </p>
             </>
           )}
 
@@ -174,10 +210,17 @@ function SkinAnalysisPage() {
                 Face Scanner
               </h1>
               <p className="text-gray-600 text-center mb-4 text-[14px] leading-[24px] w-[330px] h-[44px]">
-                Upload multiple angles for better insights. Start with one, and add more for the best results.
+                Upload multiple angles for better insights. Start with one, and
+                add more for the best results.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-6">
-                {["leftSide", "forehead", "rightSide", "eyeArea", "noseMouth"].map((areaKey) => (
+                {[
+                  "leftSide",
+                  "forehead",
+                  "rightSide",
+                  "eyeArea",
+                  "noseMouth",
+                ].map((areaKey) => (
                   <div key={areaKey} className="flex flex-col items-center">
                     <label
                       htmlFor={areaKey}
@@ -188,7 +231,8 @@ function SkinAnalysisPage() {
                           : "none",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
-                      }}>
+                      }}
+                    >
                       {!uploadedImages[areaKey] && "+"}
                     </label>
                     <input
@@ -196,7 +240,8 @@ function SkinAnalysisPage() {
                       id={areaKey}
                       accept="image/*"
                       className="hidden"
-                      onChange={(e) => handleImageUpload(e, areaKey)} />
+                      onChange={(e) => handleImageUpload(e, areaKey)}
+                    />
                     <p className="text-center text-sm mt-2 capitalize">
                       {areaKey.replace(/([A-Z])/g, " $1")}
                     </p>
@@ -206,7 +251,8 @@ function SkinAnalysisPage() {
               <button
                 className="w-[190px] h-[50px] bg-black text-white px-[77px] py-[13px]
                  rounded-[6px] hover:bg-gray-800 ml-[60px] mt-3"
-                 onClick={handleStartAnalysis}>
+                onClick={handleStartAnalysis}
+              >
                 Next
               </button>
             </>
@@ -219,39 +265,45 @@ function SkinAnalysisPage() {
                 Body Scanner
               </h1>
               <p className="text-gray-600 text-center mb-4 text-[14px] leading-[24px] w-[330px] h-[44px]">
-                Upload multiple angles for better insights. Start with one, and add more for the best results.
+                Upload multiple angles for better insights. Start with one, and
+                add more for the best results.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-6">
-                {["bodyMain", "bodyOptional1", "bodyOptional2"].map((areaKey) => (
-                  <div key={areaKey} className="flex flex-col items-center">
-                    <label
-                      htmlFor={areaKey}
-                      className="w-24 h-24 flex items-center justify-center border rounded-full cursor-pointer bg-gray-100 text-gray-600 border-[#BDBDBD]"
-                      style={{
-                        backgroundImage: uploadedImages[areaKey]
-                          ? `url(${uploadedImages[areaKey]})`
-                          : "none",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }}>
-                      {!uploadedImages[areaKey] && "+"}
-                    </label>
-                    <input
-                      type="file"
-                      id={areaKey}
-                      accept="image/*"
-                      className="hidden"
-                      onChange={(e) => handleImageUpload(e, areaKey)} />
-                    <p className="text-center text-sm mt-2 capitalize">
-                      {areaKey === "bodyMain" ? "Required" : "Optional"}
-                    </p>
-                  </div>
-                ))}
+                {["bodyMain", "bodyOptional1", "bodyOptional2"].map(
+                  (areaKey) => (
+                    <div key={areaKey} className="flex flex-col items-center">
+                      <label
+                        htmlFor={areaKey}
+                        className="w-24 h-24 flex items-center justify-center border rounded-full cursor-pointer bg-gray-100 text-gray-600 border-[#BDBDBD]"
+                        style={{
+                          backgroundImage: uploadedImages[areaKey]
+                            ? `url(${uploadedImages[areaKey]})`
+                            : "none",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                      >
+                        {!uploadedImages[areaKey] && "+"}
+                      </label>
+                      <input
+                        type="file"
+                        id={areaKey}
+                        accept="image/*"
+                        className="hidden"
+                        onChange={(e) => handleImageUpload(e, areaKey)}
+                      />
+                      <p className="text-center text-sm mt-2 capitalize">
+                        {areaKey === "bodyMain" ? "Required" : "Optional"}
+                      </p>
+                    </div>
+                  )
+                )}
               </div>
               <button
                 className="w-[190px] h-[50px] bg-black text-white px-[77px] 
                 py-[13px] rounded-[6px] hover:bg-gray-800 ml-[60px] mt-3"
-                onClick={handleStartAnalysis}>
+                onClick={handleStartAnalysis}
+              >
                 Next
               </button>
             </>
