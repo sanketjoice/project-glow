@@ -40,6 +40,7 @@ import ComprehensiveLevel from "./assets/components/ComprehensiveLevel";
 import { SubscriptIcon } from "lucide-react";
 import Subscription from "./assets/components/Subscription";
 import MyShelf from "./assets/components/Myshelf";
+import BasicTracker from "./assets/components/BasicTracker";
 
 function App() {
   return (
@@ -142,6 +143,10 @@ function App() {
               element={<Subscription />}
             />
             <Route path="/project-glow/myshelf" element={<MyShelf />} />
+            <Route
+              path="/project-glow/basictracker"
+              element={<BasicTracker />}
+            />
           </Routes>
         </div>
       </Router>

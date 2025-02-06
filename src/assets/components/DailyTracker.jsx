@@ -24,6 +24,10 @@ export default function DailyTracker() {
   const handleProfileClick = () => {
     navigate("/project-glow/userprofile");
   };
+  const handleContinue = () => {
+    navigate("/project-glow/basictracker");
+  };
+
   return (
     <div className="flex justify-center items-start min-h-screen bg-white overflow-y-auto">
       <div className="w-[390px]  rounded-xl shadow-lg flex flex-col bg-[#F4F7F2] ">
@@ -82,7 +86,10 @@ export default function DailyTracker() {
             <li>Check-in once a day</li>
             <li>General understanding of skin health</li>
           </ul>
-          <button className="border border-[#303030] px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+          <button
+            className="border border-[#303030] px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors"
+            onClick={handleContinue}
+          >
             Continue
           </button>
         </div>

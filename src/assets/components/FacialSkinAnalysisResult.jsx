@@ -55,7 +55,7 @@ export default function FacialSkinAnalysisResult() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-[390px] h-[800px] overflow-auto rounded-xl shadow-lg bg-[#F4F7F2] p-4">
+      <div className="w-[390px] h-[800px] overflow-auto rounded-xl shadow-lg mt-20 bg-[#F4F7F2] p-4">
         <div className="flex items-center justify-between mt-3 py-[16px]">
           <img
             src={leftArrow}
