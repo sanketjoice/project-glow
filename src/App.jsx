@@ -39,6 +39,7 @@ import MyAccount from "./assets/components/MyAccount";
 import ComprehensiveLevel from "./assets/components/ComprehensiveLevel";
 import { SubscriptIcon } from "lucide-react";
 import Subscription from "./assets/components/Subscription";
+import MyShelf from "./assets/components/Myshelf";
 
 function App() {
   return (
@@ -140,6 +141,7 @@ function App() {
               path="/project-glow/subscription"
               element={<Subscription />}
             />
+            <Route path="/project-glow/myshelf" element={<MyShelf />} />
           </Routes>
         </div>
       </Router>

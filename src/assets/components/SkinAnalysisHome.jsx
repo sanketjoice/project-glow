@@ -25,6 +25,12 @@ export default function SkinAnalysisHome() {
   const handleTrackerClick = () => {
     navigate("/project-glow/dailytracker");
   };
+  const handleShelfClick = () => {
+    navigate("/project-glow/myshelf");
+  };
+  const handleProfileClick = () => {
+    navigate("/project-glow/userprofile");
+  };
 
   return (
     <div className="flex justify-center items-start min-h-screen bg-white overflow-y-auto">
@@ -37,7 +43,10 @@ export default function SkinAnalysisHome() {
             <span className="text-[12px]">1</span>
             <img src={gem} alt="Gem" className="w-[24px]" />
             <span className="text-[12px]">10</span>
-            <div className="bg-[#303030] rounded-full w-[38px] h-[38px] flex items-center justify-center text-white font-bold">
+            <div
+              className="bg-[#303030] hover:cursor-pointer rounded-full w-[38px] h-[38px] flex items-center justify-center text-white font-bold"
+              onClick={handleProfileClick}
+            >
               JC
             </div>
           </div>
@@ -179,7 +188,10 @@ export default function SkinAnalysisHome() {
             <span className="mt-1 text-[12px]">Daily Tracker</span>
           </div>
 
-          <div className="flex flex-col items-center text-white hover:cursor-pointer">
+          <div
+            className="flex flex-col items-center text-white hover:cursor-pointer"
+            onClick={handleShelfClick}
+          >
             <img src={skincare} className="w-6 h-6" />
             <span className="mt-1 text-[12px]">My Shelf</span>
           </div>

@@ -30,6 +30,13 @@ export default function Home() {
   const handleProfileClick = () => {
     navigate("/project-glow/userprofile");
   };
+  const handleTrackerClick = () => {
+    navigate("/project-glow/dailytracker");
+  };
+  const handleShelfClick = () => {
+    navigate("/project-glow/myshelf");
+  };
+
   const dates = [11, 12, 13, 14, 16, 17, 18];
   const status = ["full", "full", "full", "half", "half", "full", "empty"];
 
@@ -339,12 +346,18 @@ export default function Home() {
             <span className="mt-1 text-[12px]">Scanner</span>
           </div>
 
-          <div className="flex flex-col items-center text-white">
+          <div
+            className="flex flex-col items-center text-white"
+            onClick={handleTrackerClick}
+          >
             <img src={calendar} className="w-6 h-6" />
             <span className="mt-1 text-[12px]">Daily Tracker</span>
           </div>
 
-          <div className="flex flex-col items-center text-white">
+          <div
+            className="flex flex-col items-center hover:cursor-pointer text-white"
+            onClick={handleShelfClick}
+          >
             <img src={skincare} className="w-6 h-6" />
             <span className="mt-1 text-[12px]">My Shelf</span>
           </div>
