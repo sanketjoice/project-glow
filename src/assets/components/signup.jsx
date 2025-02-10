@@ -62,7 +62,6 @@ export default function Signup() {
                 ? "bg-black text-white"
                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
             }`}
-            onClick={handleNextClick}
           >
             Sign Up
           </button>
