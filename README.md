@@ -25,3 +25,57 @@ Run the following command to start the local development server:
 or 
   yarn dev
 
+Project Structure: 
+/src
+  /assets
+    /components
+      - AIAnalysis.jsx
+      - AllergiesComponent.jsx
+      - AllergyQuestionComponent.jsx
+      - AllSet.jsx
+      - AnalysisInfo.jsx
+      - BasicTracker.jsx
+      - BenefitsPage.jsx
+      - BPAccuracy.jsx
+      - BPFeaturesSection.jsx
+      - BPFooter.jsx
+      - BPHeroSection.jsx
+      - BPNarbar.jsx
+      - BPPricingSection.jsx
+      - BPSkinAnalysis.jsx
+      - Checkin.jsx
+      - ComprehensiveLevel.jsx
+      - Congratulations.jsx
+      - ContactPage.jsx
+      - DailyTracker.jsx
+      - DateEstimation.jsx
+      - FacialSkinAnalysis.jsx
+      - FeaturesSection.jsx
+      - firebase.js
+      - FirstBadge.jsx
+      - Footer.jsx
+      - GenderContext.jsx
+      - HeroSection.jsx
+      - Home.jsx
+      - HormonalChange.jsx
+      - IngredientPreferences.jsx
+      - Login.jsx
+      - MedQuestions.jsx
+      - MyAccount.jsx
+      - MyShelf.jsx
+      - Navbar.jsx
+      - OverallScore.jsx
+  - 404.html
+  - App.css
+  - App.jsx
+  - index.html
+  - main.jsx
+  - tailwind.config.js
+  - vite.config.js
+  - package.json
+  - postcss.config.js
+  - eslint.config.js
+  - README.md
+  - .gitignore
+
+
