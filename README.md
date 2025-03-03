@@ -24,7 +24,7 @@ Run the following command to start the local development server:
   npm run dev
 or 
   yarn dev
-
+```md
 Project Structure: 
 /src
   /assets
@@ -78,4 +78,4 @@ Project Structure:
   - README.md
   - .gitignore
 
-
+```
