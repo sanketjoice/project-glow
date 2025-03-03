@@ -29,53 +29,56 @@ Project Structure:
 /src
   /assets
     /components
-      - AIAnalysis.jsx
-      - AllergiesComponent.jsx
-      - AllergyQuestionComponent.jsx
-      - AllSet.jsx
-      - AnalysisInfo.jsx
-      - BasicTracker.jsx
-      - BenefitsPage.jsx
-      - BPAccuracy.jsx
-      - BPFeaturesSection.jsx
-      - BPFooter.jsx
-      - BPHeroSection.jsx
-      - BPNarbar.jsx
-      - BPPricingSection.jsx
-      - BPSkinAnalysis.jsx
-      - Checkin.jsx
-      - ComprehensiveLevel.jsx
-      - Congratulations.jsx
-      - ContactPage.jsx
-      - DailyTracker.jsx
-      - DateEstimation.jsx
-      - FacialSkinAnalysis.jsx
-      - FeaturesSection.jsx
-      - firebase.js
-      - FirstBadge.jsx
-      - Footer.jsx
-      - GenderContext.jsx
-      - HeroSection.jsx
-      - Home.jsx
-      - HormonalChange.jsx
-      - IngredientPreferences.jsx
-      - Login.jsx
-      - MedQuestions.jsx
-      - MyAccount.jsx
-      - MyShelf.jsx
-      - Navbar.jsx
-      - OverallScore.jsx
-  - 404.html
-  - App.css
-  - App.jsx
-  - index.html
-  - main.jsx
-  - tailwind.config.js
-  - vite.config.js
-  - package.json
-  - postcss.config.js
-  - eslint.config.js
-  - README.md
-  - .gitignore
+      - AIAnalysis.jsx              // AI-driven skin analysis results
+      - AllergiesComponent.jsx      // Handles allergy-related user inputs
+      - AllergyQuestionComponent.jsx // Allergy-related questionnaire section
+      - AllSet.jsx                  // Confirmation screen after setup completion
+      - AnalysisInfo.jsx            // Displays skin analysis details
+      - BasicTracker.jsx            // Tracks user’s basic skincare habits
+      - BenefitsPage.jsx            // Showcases benefits of the platform
+      - BPAccuracy.jsx              // Displays AI accuracy metrics
+      - BPFeaturesSection.jsx       // Highlights key platform features
+      - BPFooter.jsx                // Footer section for business pages
+      - BPHeroSection.jsx           // Hero section for business pages
+      - BPNarbar.jsx                // Navigation bar for business pages
+      - BPPricingSection.jsx        // Pricing details for business services
+      - BPSkinAnalysis.jsx          // Business-oriented skin analysis insights
+      - Checkin.jsx                 // Daily skincare check-in system
+      - ComprehensiveLevel.jsx      // Represents overall skincare analysis level
+      - Congratulations.jsx         // Success screen after a user completes a step
+      - ContactPage.jsx             // Contact form for user inquiries
+      - DailyTracker.jsx            // Daily skincare routine tracker
+      - DateEstimation.jsx          // Predicts skin improvement timeline
+      - FacialSkinAnalysis.jsx      // Detailed facial skin assessment
+      - FeaturesSection.jsx         // Highlights major platform functionalities
+      - firebase.js                 // Firebase integration for authentication & storage
+      - FirstBadge.jsx              // Displays user achievement badges
+      - Footer.jsx                  // Main footer section for the app
+      - GenderContext.jsx           // Handles gender-based UI changes
+      - HeroSection.jsx             // Main landing page hero section
+      - Home.jsx                    // Home page component
+      - HormonalChange.jsx          // Tracks hormonal impact on skin
+      - IngredientPreferences.jsx   // Allows users to select skincare ingredients
+      - Login.jsx                   // Login form and authentication
+      - MedQuestions.jsx            // Medical-related questions for better recommendations
+      - MyAccount.jsx               // User profile and account settings
+      - MyShelf.jsx                 // Personalized skincare product shelf
+      - Navbar.jsx                  // Main navigation bar for the app
+      - OverallScore.jsx            // Displays user’s overall skincare score
+
+  - 404.html                        // Custom 404 error page
+  - App.css                         // Global styles
+  - App.jsx                         // Root React component
+  - index.html                      // Main HTML entry file
+  - main.jsx                        // Application entry point
+  - tailwind.config.js              // Tailwind CSS configuration
+  - vite.config.js                  // Vite configuration for build & dev server
+  - package.json                    // Project dependencies and scripts
+  - postcss.config.js               // PostCSS processing configuration
+  - eslint.config.js                // Linting rules for code quality
+  - README.md                       // Project documentation
+  - .gitignore                      // Specifies files to ignore in Git
+
+
 
 ```
